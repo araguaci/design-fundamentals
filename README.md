@@ -1,0 +1,295 @@
+# Design Fundamentals - UI Design Education Platform
+
+Um aplicativo moderno e responsivo que ensina os 5 fundamentos essenciais de UI Design que todo desenvolvedor deve conhecer. Baseado no artigo de Jeferson Brito sobre design para desenvolvedores.
+
+## 🎯 Visão Geral
+
+Este projeto é uma plataforma educacional interativa que apresenta conceitos fundamentais de UI Design:
+- **Color** - Teoria das cores e aplicação em interfaces
+- **Typography** - Arte de arranjar tipos para melhor legibilidade
+- **Visual Hierarchy** - Guiar usuários através da importância dos elementos
+- **Contrast** - Fazer elementos se destacarem com acessibilidade
+- **Alignment** - Criar ordem e equilíbrio no layout
+
+## 📦 Tech Stack
+
+- **Frontend**: React 18 + React Router 6 (SPA) + TypeScript + Vite
+- **Styling**: TailwindCSS 3 + CSS personalizado
+- **UI Components**: Radix UI + Lucide React icons
+- **Testing**: Vitest
+- **Backend**: Express (quando necessário)
+- **Package Manager**: PNPM
+- **Deployment**: Vercel
+
+## 🚀 Como Começar
+
+### Pré-requisitos
+- Node.js 18+ 
+- PNPM 10.14.0+
+
+### Instalação
+
+```bash
+# Clone o repositório
+git clone <repository-url>
+cd design-fundamentals
+
+# Instale as dependências
+pnpm install
+
+# Inicie o servidor de desenvolvimento
+pnpm dev
+
+# Acesse em http://localhost:5173
+```
+
+### Comandos Disponíveis
+
+```bash
+pnpm dev          # Inicia o servidor de desenvolvimento (frontend + backend)
+pnpm build        # Compila para produção
+pnpm build:client # Compila apenas o frontend
+pnpm build:server # Compila apenas o backend
+pnpm start        # Inicia o servidor de produção
+pnpm test         # Executa os testes com Vitest
+pnpm typecheck    # Verifica tipos TypeScript
+pnpm format.fix   # Formata o código com Prettier
+```
+
+## 📁 Estrutura do Projeto
+
+```
+design-fundamentals/
+├── client/                    # Frontend React SPA
+│   ├── pages/                # Componentes de página (rotas)
+│   │   ├── Index.tsx        # Homepage - artigo completo (homepage)
+│   │   ├── Examples.tsx     # Exemplos práticos dos 5 fundamentos (novo)
+│   │   ├── Resources.tsx    # Recursos e downloads (novo)
+│   │   └── NotFound.tsx     # Página 404
+│   ├── components/
+│   │   ├── ui/              # Componentes Radix UI + customizados
+│   │   └── Navigation.tsx   # Barra de navegação (novo)
+│   ├── App.tsx              # Configuração de rotas
+│   ├── global.css           # Estilos globais e tema
+│   └── vite-env.d.ts
+├── server/                    # Backend Express
+│   ├── index.ts             # Configuração do servidor
+│   ├── routes/              # Handlers de API
+│   └── node-build.ts        # Build para produção
+├── shared/                    # Tipos compartilhados
+│   └── api.ts
+├── tailwind.config.ts       # Configuração do Tailwind
+├── tsconfig.json            # Configuração TypeScript
+├── vite.config.ts           # Configuração Vite
+├── vite.config.server.ts    # Configuração Vite para servidor
+├── package.json
+├── ROADMAP.md               # Plano de ação com timeline (novo)
+└── README.md               # Este arquivo
+```
+
+## 🎨 Palette de Cores
+
+O projeto utiliza uma paleta de cores moderna e acessível:
+
+- **Primary**: `hsl(260, 80%, 56%)` - Roxo profundo
+- **Secondary**: `hsl(200, 70%, 50%)` - Azul brilhante
+- **Accent**: `hsl(40, 84%, 55%)` - Amarelo quente
+- **Background**: Branco em light mode, cinza escuro em dark mode
+- **Text**: Cinza escuro/claro com bom contraste WCAG
+
+## 🌐 Rotas Disponíveis
+
+| Rota | Página | Status |
+|------|--------|--------|
+| `/` | Homepage (Artigo completo) | ✅ Completa |
+| `/examples` | Exemplos Práticos | 🔄 Em Desenvolvimento |
+| `/resources` | Recursos & Downloads | 🔄 Em Desenvolvimento |
+| `*` | Página não encontrada | ✅ Completa |
+
+## 📚 Recursos Úteis
+
+### Ferramentas Mencionadas no Projeto
+
+- **[Coolors.co](https://coolors.co/)** - Gerador de paletas de cores
+- **[Contrast Checker](https://webaim.org/resources/contrastchecker/)** - Verificador de contraste WCAG
+- **[FontPair](https://www.fontpair.co/)** - Descoberta de combinações de fontes
+- **[Figma](https://www.figma.com/)** - Ferramenta de design UI/UX
+- **[Penpot](https://penpot.app/)** - Alternativa open-source ao Figma
+
+### Documentação Técnica
+
+- **[React Router 6](https://reactrouter.com/)** - Roteamento SPA
+- **[React Hook Form](https://react-hook-form.com/)** - Gerenciamento de formulários
+- **[TailwindCSS 3](https://tailwindcss.com/)** - Framework CSS utility-first
+- **[Radix UI](https://www.radix-ui.com/)** - Componentes acessíveis
+- **[TypeScript](https://www.typescriptlang.org/)** - Type safety
+- **[Vite](https://vitejs.dev/)** - Build tool moderno
+- **[Vitest](https://vitest.dev/)** - Framework de testes
+
+### Padrões & Guidelines
+
+- **[Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/WCAG21/quickref/)** - Acessibilidade na web
+- **[Material Design](https://material.io/design)** - Guidelines de design
+- **[Atomic Design](https://atomicdesign.bradfrost.com/)** - Metodologia de componentes
+
+## 📋 Plano de Ação & Próximos Passos
+
+Veja o arquivo [ROADMAP.md](./ROADMAP.md) para detalhes completos do plano de ação, timeline, prioridades e próximos passos.
+
+### Resumo Executivo
+
+| Prioridade | Tarefa | Timeline | Status |
+|------------|--------|----------|--------|
+| 🔴 CRÍTICO | Página de Exemplos Práticos | 2-3 horas | Pendente |
+| 🟠 ALTO | Página de Recursos/Downloads | 1-2 horas | Pendente |
+| 🟠 ALTO | Navegação atualizada | 30 minutos | Pendente |
+| 🟠 ALTO | Deploy para Vercel | 1 hora | Pendente |
+| 🟡 MÉDIO | Testes automatizados | 4-5 horas | Pendente |
+| 🟡 MÉDIO | Análise de performance | 2-3 horas | Pendente |
+
+## 🚀 Deployment
+
+### Deploy para Vercel
+
+Este projeto está pronto para deploy no Vercel. O processo é automático:
+
+1. **Conectar repositório**: 
+   - Acesse [Vercel](https://vercel.com) e faça login
+   - Clique em "New Project" e selecione o repositório
+
+2. **Configuração automática**:
+   - Vercel detecta automaticamente que é um projeto Vite
+   - Usa `pnpm install` por padrão
+
+3. **Variáveis de ambiente**:
+   - Configure em `Settings > Environment Variables` se necessário
+
+4. **Deploy**:
+   - Cada push para `main` faz deploy automático
+   - Visualize em `https://<project-name>.vercel.app`
+
+**Status**: Pronto para deploy ✅
+
+## 🧪 Testes
+
+```bash
+# Executar todos os testes
+pnpm test
+
+# Executar testes em modo watch
+pnpm test -- --watch
+
+# Cobertura de testes
+pnpm test -- --coverage
+```
+
+## 🔍 Type Checking
+
+```bash
+# Verificar tipos TypeScript
+pnpm typecheck
+```
+
+## 📝 Estilo de Código
+
+O projeto usa:
+- **Prettier** para formatação consistente
+- **ESLint** para linting (via TypeScript)
+- **TailwindCSS** para estilos
+
+```bash
+# Formatar código automaticamente
+pnpm format.fix
+```
+
+## 🤝 Como Contribuir
+
+1. **Fork** o repositório
+2. **Crie uma branch** para sua feature (`git checkout -b feature/AmazingFeature`)
+3. **Commit** suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** para a branch (`git push origin feature/AmazingFeature`)
+5. **Abra um Pull Request**
+
+### Guidelines para Contribuição
+
+- Siga o estilo de código existente
+- Adicione testes para novas funcionalidades
+- Atualize a documentação conforme necessário
+- Use tipos TypeScript explícitos
+- Mantenha commits pequenos e descritivos
+
+## 📖 Arquitetura
+
+### Frontend (SPA com React Router 6)
+
+O frontend é uma Single Page Application (SPA) usando React Router v6:
+
+```typescript
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Index />} />
+    <Route path="/examples" element={<Examples />} />
+    <Route path="/resources" element={<Resources />} />
+    <Route path="*" element={<NotFound />} />
+  </Routes>
+</BrowserRouter>
+```
+
+### Styling com Tailwind + CSS Variables
+
+As cores são definidas como CSS variables em `client/global.css` e usadas via `hsl(var(--nome))`:
+
+```css
+:root {
+  --primary: 260 80% 56%;
+  --secondary: 200 70% 50%;
+  --accent: 40 84% 55%;
+}
+```
+
+### Componentes Reusáveis
+
+Componentes UI baseados em Radix UI com customizações Tailwind em `client/components/ui/`.
+
+## 🐛 Troubleshooting
+
+### A aplicação não inicia
+```bash
+# Limpe node_modules e reinstale
+rm -rf node_modules pnpm-lock.yaml
+pnpm install
+pnpm dev
+```
+
+### Cores parecem estranhas (amarelo/muito brilhante)
+Verifique se o `tailwind.config.ts` está usando `hsl(var(--nome))` e que `client/global.css` define as variáveis em formato HSL.
+
+### Type errors
+```bash
+# Verifique os tipos
+pnpm typecheck
+
+# Regenere tipos do servidor
+pnpm build:server
+```
+
+## 📄 Licença
+
+Este projeto é open source. Veja o arquivo LICENSE para detalhes.
+
+## 👨‍💻 Autor
+
+Desenvolvido baseado no artigo original de **Jeferson Brito** - "The 5 UI Fundamentals a Developer Must Know"
+
+## 📞 Suporte
+
+Para dúvidas ou sugestões:
+- Abra uma [Issue](https://github.com/seu-usuario/design-fundamentals/issues)
+- Crie uma [Discussion](https://github.com/seu-usuario/design-fundamentals/discussions)
+- Entre em contato via email: seu-email@exemplo.com
+
+---
+
+**Last Updated**: Dezembro 2024
+**Version**: 1.0.0
+**Status**: Em Desenvolvimento 🚧
