@@ -20,9 +20,11 @@ Plano detalhado de ação, timeline, prioridades e próximos passos para o desen
 **Status**: ⏳ Pendente
 
 #### Descrição
+
 Criar página interativa `/examples` que demonstre na prática cada um dos 5 fundamentos com exemplos visuais, código, e explicações.
 
 #### Deliverables
+
 - [ ] Criar componente `client/pages/Examples.tsx`
 - [ ] Implementar 5 seções de exemplos:
   - [ ] **Exemplo 1: Color** - Paletas monochromatic, complementary, triadic, analogous
@@ -35,12 +37,14 @@ Criar página interativa `/examples` que demonstre na prática cada um dos 5 fun
 - [ ] Implementar navegação entre exemplos
 
 #### Requisitos Técnicos
+
 - Usar componentes Radix UI + Tailwind
 - TypeScript com tipos explícitos
 - Seguir estrutura existente do projeto
 - Código comentado e bem documentado
 
 #### Critério de Aceitação
+
 - ✅ Página carrega sem erros
 - ✅ Todos os 5 exemplos funcionam
 - ✅ Responsivo em todos os breakpoints
@@ -48,6 +52,7 @@ Criar página interativa `/examples` que demonstre na prática cada um dos 5 fun
 - ✅ Navegação intuitiva e clara
 
 #### Estimativa de Esforço por Exemplo
+
 ```
 Exemplo Color:          45 minutos
 Exemplo Typography:     45 minutos
@@ -71,9 +76,11 @@ TOTAL:                  3 horas
 **Status**: ⏳ Pendente
 
 #### Descrição
+
 Criar página `/resources` com ferramentas recomendadas, links úteis, assets para download, e guias de referência rápida.
 
 #### Deliverables
+
 - [ ] Criar componente `client/pages/Resources.tsx`
 - [ ] Organizar recursos em categorias:
   - [ ] **Ferramentas** - Links para Figma, Coolors, Contrast Checker, FontPair, Penpot
@@ -85,18 +92,21 @@ Criar página `/resources` com ferramentas recomendadas, links úteis, assets pa
 - [ ] Adicionar busca/filtro por categoria
 
 #### Requisitos Técnicos
+
 - Usar ícones Lucide React
 - Cards responsivas com Tailwind
 - Links externos com atributo `target="_blank"`
 - Metadados descritivos para cada recurso
 
 #### Critério de Aceitação
+
 - ✅ Todos os links funcionam
 - ✅ Downloads funcionam corretamente
 - ✅ Design consistente com homepage
 - ✅ Carrega rápido (< 1s)
 
 #### Estimativa de Esforço
+
 ```
 Estrutura + Layout:     30 minutos
 Cards de Recursos:      25 minutos
@@ -114,9 +124,11 @@ TOTAL:                  1.5 horas
 **Status**: ⏳ Pendente
 
 #### Descrição
+
 Criar componente de navegação reutilizável e atualizar `App.tsx` para incluir links às novas páginas.
 
 #### Deliverables
+
 - [ ] Criar componente `client/components/Navigation.tsx`
 - [ ] Implementar menu com links:
   - [ ] Home (/)
@@ -126,11 +138,13 @@ Criar componente de navegação reutilizável e atualizar `App.tsx` para incluir
 - [ ] Destacar página ativa
 
 #### Requisitos Técnicos
+
 - Usar `<Link>` do React Router (não `<a>`)
 - Componente reutilizável em todas as páginas
 - TypeScript com props tipadas
 
 #### Estimativa de Esforço
+
 ```
 Componente Nav:         15 minutos
 Integração:             10 minutos
@@ -150,9 +164,11 @@ TOTAL:                  30 minutos
 **Status**: ⏳ Pendente
 
 #### Descrição
+
 Preparar projeto e fazer deploy automático em Vercel com CI/CD.
 
 #### Deliverables
+
 - [ ] Conectar repositório GitHub/GitLab ao Vercel
 - [ ] Configurar build command: `pnpm build`
 - [ ] Configurar output directory: `dist/spa`
@@ -161,17 +177,20 @@ Preparar projeto e fazer deploy automático em Vercel com CI/CD.
 - [ ] Documentar URL de produção
 
 #### Requisitos Técnicos
+
 - Vercel account (gratuito)
 - Repositório Git público
 - package.json com scripts de build
 
 #### Critério de Aceitação
+
 - ✅ Deploy automático em cada push para main
 - ✅ Build completa sem erros
 - ✅ Site acessível em URL pública
 - ✅ Performance > 90 (Lighthouse)
 
 #### Estimativa de Esforço
+
 ```
 Configuração Vercel:    20 minutos
 Teste de Build:         15 minutos
@@ -192,9 +211,11 @@ TOTAL:                  1 hora
 **Status**: ⏳ Pendente
 
 #### Descrição
+
 Adicionar testes com Vitest para componentes principais e páginas.
 
 #### Deliverables
+
 - [ ] Testes para componente Navigation
 - [ ] Testes para página Index (homepage)
 - [ ] Testes para página Examples
@@ -202,11 +223,13 @@ Adicionar testes com Vitest para componentes principais e páginas.
 - [ ] Testes de integração básicos
 
 #### Requisitos Técnicos
+
 - Usar Vitest (já instalado)
 - Testing Library para componentes React
 - Cobertura mínima de 80%
 
 #### Estimativa de Esforço
+
 ```
 Setup + Configuração:   30 minutos
 Testes Navigation:      45 minutos
@@ -224,28 +247,33 @@ TOTAL:                  4.5 horas
 **Status**: ⏳ Pendente
 
 #### Descrição
+
 Otimizar performance, accessibility, e SEO usando Lighthouse e Web Vitals.
 
 #### Deliverables
+
 - [ ] Rodar Lighthouse audit
 - [ ] Otimizar Core Web Vitals
-- [ ] Adicionar meta tags (título, description, og:*)
+- [ ] Adicionar meta tags (título, description, og:\*)
 - [ ] Implementar sitemap.xml
 - [ ] Otimizar imagens (se houver)
 - [ ] Minificar e comprimir assets
 
 #### Requisitos Técnicos
+
 - Google Lighthouse
 - WebPageTest
 - Metatags no HTML
 
 #### Critério de Aceitação
+
 - ✅ Performance score > 90
 - ✅ Accessibility score > 95
 - ✅ Best Practices score > 90
 - ✅ SEO score > 90
 
 #### Estimativa de Esforço
+
 ```
 Lighthouse Audit:       30 minutos
 Otimização Core Web V:  45 minutos
@@ -305,12 +333,12 @@ DIA 3 (4-5 horas):
 
 ### Marcos Principais
 
-| Data | Milestone | Status |
-|------|-----------|--------|
-| Dia 0 | README.md + ROADMAP.md | ✅ Completo |
-| Dia 1 | Página Examples + Resources | 🔄 Próximo |
-| Dia 2 | Deploy Vercel + Nav | 🔄 Próximo |
-| Dia 3 | Testes + Performance | 🔄 Próximo |
+| Data  | Milestone                   | Status      |
+| ----- | --------------------------- | ----------- |
+| Dia 0 | README.md + ROADMAP.md      | ✅ Completo |
+| Dia 1 | Página Examples + Resources | 🔄 Próximo  |
+| Dia 2 | Deploy Vercel + Nav         | 🔄 Próximo  |
+| Dia 3 | Testes + Performance        | 🔄 Próximo  |
 
 ---
 
@@ -319,18 +347,21 @@ DIA 3 (4-5 horas):
 ### Por Fase
 
 **FASE 1 (Crítico)**
+
 - ✅ Página de exemplos com 5 seções funcionais
 - ✅ Exemplos práticos e visuais
 - ✅ Responsivo em todos os dispositivos
 - ✅ Sem erros de console
 
 **FASE 2 (Alto)**
+
 - ✅ Página de recursos com links funcionando
 - ✅ Navegação intuitiva entre seções
 - ✅ Deploy automático em Vercel
 - ✅ URL pública e acessível
 
 **FASE 3 (Médio)**
+
 - ✅ Testes com cobertura > 80%
 - ✅ Lighthouse score > 90 (performance)
 - ✅ Core Web Vitals ótimos
@@ -430,13 +461,13 @@ Integration Tests      | 5+        | Dia 2
 
 ### Possíveis Desafios & Soluções
 
-| Desafio | Solução |
-|---------|---------|
-| Exemplos visuais complexos | Usar componentes simples + Tailwind |
-| Performance com muitas imagens | Lazy loading + otimização |
-| Responsividade em móvel | Tailwind breakpoints |
-| Dark mode | CSS variables + next-themes |
-| Testes de UI | Vitest + Testing Library |
+| Desafio                        | Solução                             |
+| ------------------------------ | ----------------------------------- |
+| Exemplos visuais complexos     | Usar componentes simples + Tailwind |
+| Performance com muitas imagens | Lazy loading + otimização           |
+| Responsividade em móvel        | Tailwind breakpoints                |
+| Dark mode                      | CSS variables + next-themes         |
+| Testes de UI                   | Vitest + Testing Library            |
 
 ### Próximos Passos Após Este Roadmap
 
@@ -462,4 +493,3 @@ Integration Tests      | 5+        | Dia 2
 **Última Atualização**: Dezembro 2024  
 **Status**: 🚧 Em Planejamento  
 **Próximo Passo**: Implementar FASE 1 (Página de Exemplos)
-

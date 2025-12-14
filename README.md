@@ -5,6 +5,7 @@ Um aplicativo moderno e responsivo que ensina os 5 fundamentos essenciais de UI 
 ## 🎯 Visão Geral
 
 Este projeto é uma plataforma educacional interativa que apresenta conceitos fundamentais de UI Design:
+
 - **Color** - Teoria das cores e aplicação em interfaces
 - **Typography** - Arte de arranjar tipos para melhor legibilidade
 - **Visual Hierarchy** - Guiar usuários através da importância dos elementos
@@ -24,7 +25,8 @@ Este projeto é uma plataforma educacional interativa que apresenta conceitos fu
 ## 🚀 Como Começar
 
 ### Pré-requisitos
-- Node.js 18+ 
+
+- Node.js 18+
 - PNPM 10.14.0+
 
 ### Instalação
@@ -99,12 +101,12 @@ O projeto utiliza uma paleta de cores moderna e acessível:
 
 ## 🌐 Rotas Disponíveis
 
-| Rota | Página | Status |
-|------|--------|--------|
-| `/` | Homepage (Artigo completo) | ✅ Completa |
-| `/examples` | Exemplos Práticos | 🔄 Em Desenvolvimento |
-| `/resources` | Recursos & Downloads | 🔄 Em Desenvolvimento |
-| `*` | Página não encontrada | ✅ Completa |
+| Rota         | Página                     | Status                |
+| ------------ | -------------------------- | --------------------- |
+| `/`          | Homepage (Artigo completo) | ✅ Completa           |
+| `/examples`  | Exemplos Práticos          | 🔄 Em Desenvolvimento |
+| `/resources` | Recursos & Downloads       | 🔄 Em Desenvolvimento |
+| `*`          | Página não encontrada      | ✅ Completa           |
 
 ## 📚 Recursos Úteis
 
@@ -138,14 +140,14 @@ Veja o arquivo [ROADMAP.md](./ROADMAP.md) para detalhes completos do plano de a�
 
 ### Resumo Executivo
 
-| Prioridade | Tarefa | Timeline | Status |
-|------------|--------|----------|--------|
-| 🔴 CRÍTICO | Página de Exemplos Práticos | 2-3 horas | Pendente |
-| 🟠 ALTO | Página de Recursos/Downloads | 1-2 horas | Pendente |
-| 🟠 ALTO | Navegação atualizada | 30 minutos | Pendente |
-| 🟠 ALTO | Deploy para Vercel | 1 hora | Pendente |
-| 🟡 MÉDIO | Testes automatizados | 4-5 horas | Pendente |
-| 🟡 MÉDIO | Análise de performance | 2-3 horas | Pendente |
+| Prioridade | Tarefa                       | Timeline   | Status   |
+| ---------- | ---------------------------- | ---------- | -------- |
+| 🔴 CRÍTICO | Página de Exemplos Práticos  | 2-3 horas  | Pendente |
+| 🟠 ALTO    | Página de Recursos/Downloads | 1-2 horas  | Pendente |
+| 🟠 ALTO    | Navegação atualizada         | 30 minutos | Pendente |
+| 🟠 ALTO    | Deploy para Vercel           | 1 hora     | Pendente |
+| 🟡 MÉDIO   | Testes automatizados         | 4-5 horas  | Pendente |
+| 🟡 MÉDIO   | Análise de performance       | 2-3 horas  | Pendente |
 
 ## 🚀 Deployment
 
@@ -153,7 +155,7 @@ Veja o arquivo [ROADMAP.md](./ROADMAP.md) para detalhes completos do plano de a�
 
 Este projeto está pronto para deploy no Vercel. O processo é automático:
 
-1. **Conectar repositório**: 
+1. **Conectar repositório**:
    - Acesse [Vercel](https://vercel.com) e faça login
    - Clique em "New Project" e selecione o repositório
 
@@ -193,6 +195,7 @@ pnpm typecheck
 ## 📝 Estilo de Código
 
 O projeto usa:
+
 - **Prettier** para formatação consistente
 - **ESLint** para linting (via TypeScript)
 - **TailwindCSS** para estilos
@@ -254,6 +257,7 @@ Componentes UI baseados em Radix UI com customizações Tailwind em `client/comp
 ## 🐛 Troubleshooting
 
 ### A aplicação não inicia
+
 ```bash
 # Limpe node_modules e reinstale
 rm -rf node_modules pnpm-lock.yaml
@@ -262,9 +266,11 @@ pnpm dev
 ```
 
 ### Cores parecem estranhas (amarelo/muito brilhante)
+
 Verifique se o `tailwind.config.ts` está usando `hsl(var(--nome))` e que `client/global.css` define as variáveis em formato HSL.
 
 ### Type errors
+
 ```bash
 # Verifique os tipos
 pnpm typecheck
@@ -284,6 +290,7 @@ Desenvolvido baseado no artigo original de **Jeferson Brito** - "The 5 UI Fundam
 ## 📞 Suporte
 
 Para dúvidas ou sugestões:
+
 - Abra uma [Issue](https://github.com/seu-usuario/design-fundamentals/issues)
 - Crie uma [Discussion](https://github.com/seu-usuario/design-fundamentals/discussions)
 - Entre em contato via email: seu-email@exemplo.com

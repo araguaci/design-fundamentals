@@ -101,19 +101,27 @@ export default function Examples() {
                 <div className="flex flex-wrap gap-4">
                   <div className="flex flex-col items-center">
                     <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg bg-red-900 mb-2"></div>
-                    <span className="text-sm text-muted-foreground">#740001</span>
+                    <span className="text-sm text-muted-foreground">
+                      #740001
+                    </span>
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg bg-red-600 mb-2"></div>
-                    <span className="text-sm text-muted-foreground">#DC2626</span>
+                    <span className="text-sm text-muted-foreground">
+                      #DC2626
+                    </span>
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg bg-red-300 mb-2"></div>
-                    <span className="text-sm text-muted-foreground">#FCA5A5</span>
+                    <span className="text-sm text-muted-foreground">
+                      #FCA5A5
+                    </span>
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg bg-red-100 mb-2"></div>
-                    <span className="text-sm text-muted-foreground">#FEE2E2</span>
+                    <span className="text-sm text-muted-foreground">
+                      #FEE2E2
+                    </span>
                   </div>
                 </div>
               </div>
@@ -133,7 +141,9 @@ export default function Examples() {
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg bg-yellow-500 mb-2"></div>
-                    <span className="text-sm text-muted-foreground">Amarelo</span>
+                    <span className="text-sm text-muted-foreground">
+                      Amarelo
+                    </span>
                   </div>
                 </div>
               </div>
@@ -149,7 +159,9 @@ export default function Examples() {
                 <div className="flex flex-wrap gap-4">
                   <div className="flex flex-col items-center">
                     <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg bg-red-500 mb-2"></div>
-                    <span className="text-sm text-muted-foreground">Vermelho</span>
+                    <span className="text-sm text-muted-foreground">
+                      Vermelho
+                    </span>
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg bg-blue-500 mb-2"></div>
@@ -157,7 +169,9 @@ export default function Examples() {
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg bg-yellow-500 mb-2"></div>
-                    <span className="text-sm text-muted-foreground">Amarelo</span>
+                    <span className="text-sm text-muted-foreground">
+                      Amarelo
+                    </span>
                   </div>
                 </div>
               </div>
@@ -176,7 +190,8 @@ export default function Examples() {
                     <div>
                       <p className="font-semibold text-foreground">60%</p>
                       <p className="text-sm text-foreground/70">
-                        Cor Primária - Cor dominante do design (fundo, áreas grandes)
+                        Cor Primária - Cor dominante do design (fundo, áreas
+                        grandes)
                       </p>
                     </div>
                   </div>
@@ -221,9 +236,12 @@ export default function Examples() {
                   <h3 className="text-xl font-semibold text-foreground mb-4">
                     Serif
                   </h3>
-                  <p className="text-lg mb-4" style={{ fontFamily: "Georgia, serif" }}>
-                    Este é um exemplo de fonte Serif. Está geralmente associada com
-                    tradição e formalidade.
+                  <p
+                    className="text-lg mb-4"
+                    style={{ fontFamily: "Georgia, serif" }}
+                  >
+                    Este é um exemplo de fonte Serif. Está geralmente associada
+                    com tradição e formalidade.
                   </p>
                   <p className="text-sm text-muted-foreground">
                     💡 Melhor para: Livros, jornais, documentos formais
@@ -233,8 +251,12 @@ export default function Examples() {
                   <h3 className="text-xl font-semibold text-foreground mb-4">
                     Sans-Serif
                   </h3>
-                  <p className="text-lg mb-4" style={{ fontFamily: "Arial, sans-serif" }}>
-                    Este é um exemplo de fonte Sans-Serif. Parece moderno e limpo.
+                  <p
+                    className="text-lg mb-4"
+                    style={{ fontFamily: "Arial, sans-serif" }}
+                  >
+                    Este é um exemplo de fonte Sans-Serif. Parece moderno e
+                    limpo.
                   </p>
                   <p className="text-sm text-muted-foreground">
                     💡 Melhor para: Web, aplicativos, design moderno
@@ -343,13 +365,17 @@ export default function Examples() {
                   💡 Dica: Comprimento Ideal da Linha
                 </h3>
                 <p className="text-foreground/80 mb-4">
-                  O comprimento ideal de uma linha está entre <strong>45 e 75 caracteres</strong>.
-                  Linhas muito longas cansam os olhos.
+                  O comprimento ideal de uma linha está entre{" "}
+                  <strong>45 e 75 caracteres</strong>. Linhas muito longas
+                  cansam os olhos.
                 </p>
                 <div className="bg-white dark:bg-card rounded p-4 mt-4">
-                  <p className="text-foreground/70" style={{ maxWidth: "50ch" }}>
-                    Este parágrafo tem exatamente 50 caracteres por linha (50ch). É
-                    confortável para leitura contínua.
+                  <p
+                    className="text-foreground/70"
+                    style={{ maxWidth: "50ch" }}
+                  >
+                    Este parágrafo tem exatamente 50 caracteres por linha
+                    (50ch). É confortável para leitura contínua.
                   </p>
                 </div>
               </div>
@@ -417,7 +443,9 @@ export default function Examples() {
                     <p className="text-lg font-semibold">Elemento Destacado</p>
                   </div>
                   <div className="p-8 rounded-lg bg-accent text-accent-foreground">
-                    <p className="text-lg font-semibold">CTA (Call-to-Action)</p>
+                    <p className="text-lg font-semibold">
+                      CTA (Call-to-Action)
+                    </p>
                   </div>
                 </div>
               </div>
@@ -669,7 +697,9 @@ export default function Examples() {
                     <tbody>
                       <tr className="border-t border-border">
                         <td className="text-left p-4">Produto A</td>
-                        <td className="text-right p-4 font-mono">R$ 1.234,56</td>
+                        <td className="text-right p-4 font-mono">
+                          R$ 1.234,56
+                        </td>
                       </tr>
                       <tr className="border-t border-border">
                         <td className="text-left p-4">Produto B</td>
@@ -677,7 +707,9 @@ export default function Examples() {
                       </tr>
                       <tr className="border-t border-border">
                         <td className="text-left p-4">Produto C</td>
-                        <td className="text-right p-4 font-mono">R$ 12.345,67</td>
+                        <td className="text-right p-4 font-mono">
+                          R$ 12.345,67
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -720,8 +752,8 @@ export default function Examples() {
                 </h3>
                 <ul className="space-y-3 text-foreground/80">
                   <li>
-                    <strong>Figma:</strong> Use alignment tools (Ctrl+Alt+A) para
-                    alinhar múltiplos elementos
+                    <strong>Figma:</strong> Use alignment tools (Ctrl+Alt+A)
+                    para alinhar múltiplos elementos
                   </li>
                   <li>
                     <strong>Grids:</strong> Configure grids personalizadas na

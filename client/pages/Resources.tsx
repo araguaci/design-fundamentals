@@ -15,7 +15,8 @@ export default function Resources() {
     tools: [
       {
         title: "Coolors.co",
-        description: "Gerador de paletas de cores e explorador de harmonia de cores",
+        description:
+          "Gerador de paletas de cores e explorador de harmonia de cores",
         url: "https://coolors.co",
         icon: Palette,
         category: "Cores",
@@ -29,7 +30,8 @@ export default function Resources() {
       },
       {
         title: "FontPair",
-        description: "Descubra combinações perfeitas de fontes para seu projeto",
+        description:
+          "Descubra combinações perfeitas de fontes para seu projeto",
         url: "https://www.fontpair.co",
         icon: Type,
         category: "Tipografia",
@@ -345,14 +347,15 @@ export default function Resources() {
               📥 Downloads
             </h2>
             <p className="text-lg text-foreground/80 mb-8">
-              Baixe checklists, guias de referência e templates para usar offline
+              Baixe checklists, guias de referência e templates para usar
+              offline
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <button
                 onClick={() =>
                   alert(
-                    "Em breve! Checklist PDF com todos os 5 fundamentos para impressão"
+                    "Em breve! Checklist PDF com todos os 5 fundamentos para impressão",
                   )
                 }
                 className="flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-semibold"
@@ -362,7 +365,9 @@ export default function Resources() {
               </button>
               <button
                 onClick={() =>
-                  alert("Em breve! Guia de referência rápida em formato Markdown")
+                  alert(
+                    "Em breve! Guia de referência rápida em formato Markdown",
+                  )
                 }
                 className="flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg hover:opacity-90 transition-opacity font-semibold"
               >
@@ -418,9 +423,7 @@ export default function Resources() {
             </div>
 
             <div className="border border-border rounded-lg p-6">
-              <h3 className="font-semibold text-foreground mb-3">
-                Comunidade
-              </h3>
+              <h3 className="font-semibold text-foreground mb-3">Comunidade</h3>
               <p className="text-sm text-muted-foreground">
                 Participe das discussões e compartilhe seus designs
               </p>
@@ -433,7 +436,8 @@ export default function Resources() {
       <footer className="border-t border-border bg-muted/50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
           <p className="text-sm text-muted-foreground text-center">
-            © 2025 Design Fundamentals. Recursos para designers e desenvolvedores.
+            © 2025 Design Fundamentals. Recursos para designers e
+            desenvolvedores.
           </p>
         </div>
       </footer>
