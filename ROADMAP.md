@@ -71,9 +71,9 @@ TOTAL:                  3 horas
 
 ### 2.1 Implementar Página de Recursos & Downloads
 
-**Prioridade**: 🟠 ALTO  
-**Timeline**: 1-2 horas  
-**Status**: ⏳ Pendente
+**Prioridade**: 🟠 ALTO
+**Timeline**: 1-2 horas
+**Status**: ✅ COMPLETO
 
 #### Descrição
 
