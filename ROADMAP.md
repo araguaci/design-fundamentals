@@ -1,0 +1,465 @@
+# 🗺️ Roadmap - Design Fundamentals Project
+
+Plano detalhado de ação, timeline, prioridades e próximos passos para o desenvolvimento completo da plataforma de educação em UI Design.
+
+## 📊 Visão Geral do Plano
+
+**Objetivo**: Transformar a plataforma de um artigo educacional em uma aplicação interativa completa com exemplos práticos, recursos, e deploy em produção.
+
+**Timeline Total**: ~12-14 horas (1 desenvolvedor autônomo)
+**Período Estimado**: 2-3 dias de trabalho focado (4-5 horas/dia)
+
+---
+
+## 🔴 FASE 1: CRÍTICO (2-3 horas) - Sprint 1
+
+### 1.1 Implementar Página de Exemplos Práticos dos 5 Fundamentos
+
+**Prioridade**: 🔴 CRÍTICO  
+**Timeline**: 2-3 horas  
+**Status**: ⏳ Pendente
+
+#### Descrição
+Criar página interativa `/examples` que demonstre na prática cada um dos 5 fundamentos com exemplos visuais, código, e explicações.
+
+#### Deliverables
+- [ ] Criar componente `client/pages/Examples.tsx`
+- [ ] Implementar 5 seções de exemplos:
+  - [ ] **Exemplo 1: Color** - Paletas monochromatic, complementary, triadic, analogous
+  - [ ] **Exemplo 2: Typography** - Comparação serif vs sans-serif, line-height, spacing
+  - [ ] **Exemplo 3: Visual Hierarchy** - Demonstração de size, weight, color, spacing
+  - [ ] **Exemplo 4: Contrast** - Exemplos WCAG 4.5:1 vs baixo contraste
+  - [ ] **Exemplo 5: Alignment** - Grid e alinhamentos (left, center, right)
+- [ ] Adicionar componentes interativos onde possível
+- [ ] Garantir responsividade (mobile, tablet, desktop)
+- [ ] Implementar navegação entre exemplos
+
+#### Requisitos Técnicos
+- Usar componentes Radix UI + Tailwind
+- TypeScript com tipos explícitos
+- Seguir estrutura existente do projeto
+- Código comentado e bem documentado
+
+#### Critério de Aceitação
+- ✅ Página carrega sem erros
+- ✅ Todos os 5 exemplos funcionam
+- ✅ Responsivo em todos os breakpoints
+- ✅ Tempo de carregamento < 2s
+- ✅ Navegação intuitiva e clara
+
+#### Estimativa de Esforço por Exemplo
+```
+Exemplo Color:          45 minutos
+Exemplo Typography:     45 minutos
+Exemplo Visual Hier:    30 minutos
+Exemplo Contrast:       30 minutos
+Exemplo Alignment:      30 minutos
+Layout + Nav:           20 minutos
+Testes/Polimento:       15 minutos
+───────────────────
+TOTAL:                  3 horas
+```
+
+---
+
+## 🟠 FASE 2: ALTO (1-2 horas) - Sprint 1
+
+### 2.1 Implementar Página de Recursos & Downloads
+
+**Prioridade**: 🟠 ALTO  
+**Timeline**: 1-2 horas  
+**Status**: ⏳ Pendente
+
+#### Descrição
+Criar página `/resources` com ferramentas recomendadas, links úteis, assets para download, e guias de referência rápida.
+
+#### Deliverables
+- [ ] Criar componente `client/pages/Resources.tsx`
+- [ ] Organizar recursos em categorias:
+  - [ ] **Ferramentas** - Links para Figma, Coolors, Contrast Checker, FontPair, Penpot
+  - [ ] **Documentação** - Links para WCAG, Material Design, Atomic Design
+  - [ ] **Bibliotecas** - React, Tailwind, Radix UI, TypeScript
+  - [ ] **Checklists** - Download em PDF/CSV dos 5 fundamentos
+- [ ] Criar cards com ícones para cada recurso
+- [ ] Implementar seção de downloads
+- [ ] Adicionar busca/filtro por categoria
+
+#### Requisitos Técnicos
+- Usar ícones Lucide React
+- Cards responsivas com Tailwind
+- Links externos com atributo `target="_blank"`
+- Metadados descritivos para cada recurso
+
+#### Critério de Aceitação
+- ✅ Todos os links funcionam
+- ✅ Downloads funcionam corretamente
+- ✅ Design consistente com homepage
+- ✅ Carrega rápido (< 1s)
+
+#### Estimativa de Esforço
+```
+Estrutura + Layout:     30 minutos
+Cards de Recursos:      25 minutos
+Seção de Downloads:     20 minutos
+Responsividade:         15 minutos
+Testes/Polimento:       10 minutos
+───────────────────
+TOTAL:                  1.5 horas
+```
+
+### 2.2 Atualizar Navegação do Projeto
+
+**Prioridade**: 🟠 ALTO  
+**Timeline**: 30 minutos  
+**Status**: ⏳ Pendente
+
+#### Descrição
+Criar componente de navegação reutilizável e atualizar `App.tsx` para incluir links às novas páginas.
+
+#### Deliverables
+- [ ] Criar componente `client/components/Navigation.tsx`
+- [ ] Implementar menu com links:
+  - [ ] Home (/)
+  - [ ] Exemplos (/examples)
+  - [ ] Recursos (/resources)
+- [ ] Adicionar mobile menu (hamburger) se necessário
+- [ ] Destacar página ativa
+
+#### Requisitos Técnicos
+- Usar `<Link>` do React Router (não `<a>`)
+- Componente reutilizável em todas as páginas
+- TypeScript com props tipadas
+
+#### Estimativa de Esforço
+```
+Componente Nav:         15 minutos
+Integração:             10 minutos
+Mobile Menu:            5 minutos
+───────────────────
+TOTAL:                  30 minutos
+```
+
+---
+
+## 🟠 FASE 3: ALTO (1 hora) - Sprint 2
+
+### 3.1 Configurar Deploy para Vercel
+
+**Prioridade**: 🟠 ALTO  
+**Timeline**: 1 hora  
+**Status**: ⏳ Pendente
+
+#### Descrição
+Preparar projeto e fazer deploy automático em Vercel com CI/CD.
+
+#### Deliverables
+- [ ] Conectar repositório GitHub/GitLab ao Vercel
+- [ ] Configurar build command: `pnpm build`
+- [ ] Configurar output directory: `dist/spa`
+- [ ] Definir variáveis de ambiente (se necessário)
+- [ ] Testar deploy automático
+- [ ] Documentar URL de produção
+
+#### Requisitos Técnicos
+- Vercel account (gratuito)
+- Repositório Git público
+- package.json com scripts de build
+
+#### Critério de Aceitação
+- ✅ Deploy automático em cada push para main
+- ✅ Build completa sem erros
+- ✅ Site acessível em URL pública
+- ✅ Performance > 90 (Lighthouse)
+
+#### Estimativa de Esforço
+```
+Configuração Vercel:    20 minutos
+Teste de Build:         15 minutos
+Ajustes/Fixes:          20 minutos
+Documentação:           5 minutos
+───────────────────
+TOTAL:                  1 hora
+```
+
+---
+
+## 🟡 FASE 4: MÉDIO (4-5 horas) - Sprint 2-3
+
+### 4.1 Implementar Testes Automatizados
+
+**Prioridade**: 🟡 MÉDIO  
+**Timeline**: 4-5 horas  
+**Status**: ⏳ Pendente
+
+#### Descrição
+Adicionar testes com Vitest para componentes principais e páginas.
+
+#### Deliverables
+- [ ] Testes para componente Navigation
+- [ ] Testes para página Index (homepage)
+- [ ] Testes para página Examples
+- [ ] Testes para página Resources
+- [ ] Testes de integração básicos
+
+#### Requisitos Técnicos
+- Usar Vitest (já instalado)
+- Testing Library para componentes React
+- Cobertura mínima de 80%
+
+#### Estimativa de Esforço
+```
+Setup + Configuração:   30 minutos
+Testes Navigation:      45 minutos
+Testes Pages:           2 horas
+Testes Integração:      1 hora
+Coverage Report:        15 minutos
+───────────────────
+TOTAL:                  4.5 horas
+```
+
+### 4.2 Análise de Performance & SEO
+
+**Prioridade**: 🟡 MÉDIO  
+**Timeline**: 2-3 horas  
+**Status**: ⏳ Pendente
+
+#### Descrição
+Otimizar performance, accessibility, e SEO usando Lighthouse e Web Vitals.
+
+#### Deliverables
+- [ ] Rodar Lighthouse audit
+- [ ] Otimizar Core Web Vitals
+- [ ] Adicionar meta tags (título, description, og:*)
+- [ ] Implementar sitemap.xml
+- [ ] Otimizar imagens (se houver)
+- [ ] Minificar e comprimir assets
+
+#### Requisitos Técnicos
+- Google Lighthouse
+- WebPageTest
+- Metatags no HTML
+
+#### Critério de Aceitação
+- ✅ Performance score > 90
+- ✅ Accessibility score > 95
+- ✅ Best Practices score > 90
+- ✅ SEO score > 90
+
+#### Estimativa de Esforço
+```
+Lighthouse Audit:       30 minutos
+Otimização Core Web V:  45 minutos
+Meta Tags + SEO:        30 minutos
+Testing:                15 minutos
+───────────────────
+TOTAL:                  2 horas
+```
+
+---
+
+## 🟢 FASE 5: BAIXO (3-4 horas) - Sprint 3+
+
+### 5.1 Melhorias Adicionais
+
+**Prioridade**: 🟢 BAIXO  
+**Timeline**: Variável  
+**Status**: ⏳ Pendente
+
+Essas melhorias podem ser implementadas conforme tempo disponível:
+
+- [ ] **Blog/Case Studies**: Mais artigos sobre design
+- [ ] **Exercícios Interativos**: Quiz e desafios práticos
+- [ ] **Dark Mode Toggle**: Switch de tema completo
+- [ ] **Comentários/Feedback**: Sistema de avaliação
+- [ ] **Analytics**: Integração com Google Analytics
+- [ ] **Multilingual**: Suporte para múltiplos idiomas (PT, EN, ES)
+- [ ] **PWA**: Progressive Web App com offline support
+- [ ] **API Backend**: Endpoints para dados dinâmicos
+- [ ] **Banco de Dados**: Supabase/PostgreSQL para conteúdo
+- [ ] **Autenticação**: Login para tracking de progresso
+
+---
+
+## 📅 Timeline de Execução
+
+### Semana 1 - Implementação Core
+
+```
+DIA 1 (4-5 horas):
+├─ Manhã (2-3h): Página de Exemplos Práticos [CRÍTICO]
+└─ Tarde (1-2h): Página de Recursos [ALTO]
+
+DIA 2 (4-5 horas):
+├─ Manhã (1h): Navegação + Integração [ALTO]
+├─ Tarde (1h): Deploy Vercel [ALTO]
+└─ Final (2-3h): Testes Básicos [MÉDIO]
+
+DIA 3 (4-5 horas):
+├─ Matutino (2h): Análise de Performance [MÉDIO]
+├─ Tarde (2-3h): Fixes e Otimizações [MÉDIO]
+└─ Final (30min): Documentação Final
+```
+
+**Total Estimado**: 12-14 horas  
+**Por Dia**: 4-5 horas (em 3 dias)
+
+### Marcos Principais
+
+| Data | Milestone | Status |
+|------|-----------|--------|
+| Dia 0 | README.md + ROADMAP.md | ✅ Completo |
+| Dia 1 | Página Examples + Resources | 🔄 Próximo |
+| Dia 2 | Deploy Vercel + Nav | 🔄 Próximo |
+| Dia 3 | Testes + Performance | 🔄 Próximo |
+
+---
+
+## 🎯 Critérios de Sucesso
+
+### Por Fase
+
+**FASE 1 (Crítico)**
+- ✅ Página de exemplos com 5 seções funcionais
+- ✅ Exemplos práticos e visuais
+- ✅ Responsivo em todos os dispositivos
+- ✅ Sem erros de console
+
+**FASE 2 (Alto)**
+- ✅ Página de recursos com links funcionando
+- ✅ Navegação intuitiva entre seções
+- ✅ Deploy automático em Vercel
+- ✅ URL pública e acessível
+
+**FASE 3 (Médio)**
+- ✅ Testes com cobertura > 80%
+- ✅ Lighthouse score > 90 (performance)
+- ✅ Core Web Vitals ótimos
+- ✅ SEO otimizado
+
+### Geral
+
+- ✅ Aplicação sem erros e warnings
+- ✅ Código TypeScript type-safe
+- ✅ Componentes reutilizáveis
+- ✅ Documentação completa
+- ✅ Deploy automático funcionando
+- ✅ Performance excelente
+- ✅ Acessível (WCAG AA)
+
+---
+
+## 🔧 Checklist de Implementação
+
+### Estrutura do Projeto
+
+- [ ] Criar arquivo `ROADMAP.md` (este arquivo)
+- [ ] Criar arquivo `README.md` (documentação)
+- [ ] Atualizar `package.json` com scripts necessários
+
+### Páginas Novas
+
+- [ ] `client/pages/Examples.tsx` - Exemplos dos 5 fundamentos
+- [ ] `client/pages/Resources.tsx` - Recursos e downloads
+- [ ] `client/components/Navigation.tsx` - Menu navegação
+
+### Integração
+
+- [ ] Atualizar `client/App.tsx` com rotas novas
+- [ ] Adicionar Navigation em todas as páginas
+- [ ] Testar links de navegação
+
+### Deploy
+
+- [ ] Conectar repositório ao Vercel
+- [ ] Configurar build e deployment
+- [ ] Testar CI/CD automático
+- [ ] Documentar URL de produção
+
+### Qualidade
+
+- [ ] Executar `pnpm typecheck` com sucesso
+- [ ] Executar `pnpm test` com sucesso
+- [ ] Executar `pnpm build` sem erros
+- [ ] Lighthouse audit > 90 em 4 categorias
+- [ ] Sem console warnings/errors
+
+### Documentação
+
+- [ ] README.md atualizado com arquitetura
+- [ ] ROADMAP.md com detalhes de implementação
+- [ ] Comentários no código
+- [ ] Docstrings para componentes complexos
+
+---
+
+## 📊 Métricas de Acompanhamento
+
+### Performance Esperada
+
+```
+Métrica                 | Target    | Atualizações
+─────────────────────────────────────────────────
+First Contentful Paint  | < 1.5s    | Dia 3
+Largest Contentful P.   | < 2.5s    | Dia 3
+Cumulative Layout Shift | < 0.1     | Dia 3
+Lighthouse Performance  | > 90      | Dia 3
+Lighthouse Accessibility| > 95      | Dia 3
+Build Time              | < 30s     | Dia 2
+Bundle Size             | < 200KB   | Dia 3
+```
+
+### Cobertura de Testes
+
+```
+Component Coverage      | 80%+      | Dia 2
+Page Coverage          | 75%+      | Dia 2
+Integration Tests      | 5+        | Dia 2
+```
+
+---
+
+## 📝 Notas Importantes
+
+### Decisões de Design
+
+1. **Rotas SPA**: Usar React Router v6 para navegação client-side
+2. **Styling**: Tailwind + CSS Variables para consistência
+3. **Componentes**: Radix UI para acessibilidade
+4. **TypeScript**: Type-safe em todo o código
+5. **Deploy**: Vercel com CI/CD automático
+
+### Possíveis Desafios & Soluções
+
+| Desafio | Solução |
+|---------|---------|
+| Exemplos visuais complexos | Usar componentes simples + Tailwind |
+| Performance com muitas imagens | Lazy loading + otimização |
+| Responsividade em móvel | Tailwind breakpoints |
+| Dark mode | CSS variables + next-themes |
+| Testes de UI | Vitest + Testing Library |
+
+### Próximos Passos Após Este Roadmap
+
+1. Coletar feedback de usuários
+2. Implementar FASE 5 (Low Priority)
+3. Adicionar conteúdo (blog, case studies)
+4. Integração com banco de dados
+5. Autenticação e user tracking
+6. Multilingual support
+7. Mobile app (React Native)
+
+---
+
+## 📞 Pontos de Contato
+
+- **Documentação**: Veja [README.md](./README.md)
+- **Issues**: Abra uma issue no repositório
+- **Questions**: Discussões no GitHub
+- **Contribuições**: Pull requests bem-vindos
+
+---
+
+**Última Atualização**: Dezembro 2024  
+**Status**: 🚧 Em Planejamento  
+**Próximo Passo**: Implementar FASE 1 (Página de Exemplos)
+
