@@ -27,6 +27,7 @@ Instruções passo-a-passo para fazer deploy da aplicação no Vercel.
 **Framework**: Vite (Vercel detectará automaticamente)
 
 **Build Settings** (já pré-configurados):
+
 ```
 Build Command: pnpm build
 Output Directory: dist/spa
@@ -49,11 +50,13 @@ Após clicar em Deploy:
 ## 📊 Passo 3: Verificar o Deploy
 
 ### URL de Produção
+
 ```
 https://<seu-projeto>.vercel.app
 ```
 
 ### Acessar Dashboard
+
 - Vá para [https://vercel.com/dashboard](https://vercel.com/dashboard)
 - Clique no seu projeto
 - Verifique logs, domínio e settings
@@ -100,11 +103,13 @@ Se precisar adicionar variáveis (caso use APIs no futuro):
 ## 🔍 Monitoramento & Logs
 
 ### Acessar Logs de Build
+
 ```
 Projeto → Deployments → Clique no deployment → Logs
 ```
 
 ### Analytics
+
 - Performance metrics
 - Error tracking
 - Uptime monitoring
@@ -124,12 +129,14 @@ Projeto → Deployments → Clique no deployment → Logs
 ### Build falha com erro
 
 **Solução**: Verifique os logs em `Deployments → Logs`
+
 - Procure por mensagens de erro específicas
 - Geralmente relacionadas a dependências ou scripts
 
 ### Site mostra erro 404
 
 **Solução**: Verifique se o `vercel.json` está correto:
+
 ```json
 {
   "rewrites": [
@@ -146,6 +153,7 @@ Deve redirecionar todas as rotas para `index.html` (SPA).
 ### Performance lenta
 
 **Solução**:
+
 1. Verifique **Analytics** → Performance
 2. Use **Vercel Web Analytics** para mais detalhes
 3. Otimize imagens/assets (se houver)
@@ -160,6 +168,7 @@ Após deploy bem-sucedido:
    - `/resources` → Recursos & Downloads
 
 2. ✅ Compartilhar URL com equipe/usuários:
+
    ```
    https://<seu-projeto>.vercel.app
    ```

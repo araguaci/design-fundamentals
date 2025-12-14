@@ -333,12 +333,12 @@ DIA 3 (4-5 horas):
 
 ### Marcos Principais
 
-| Data  | Milestone                   | Status          |
-| ----- | --------------------------- | --------------- |
-| Dia 0 | README.md + ROADMAP.md      | ✅ Completo     |
-| Dia 1 | Página Examples + Resources | ✅ Completo     |
-| Dia 2 | Deploy Vercel + Nav         | ✅ Completo     |
-| Dia 3 | Testes + Performance        | ⏳ Próximo       |
+| Data  | Milestone                   | Status      |
+| ----- | --------------------------- | ----------- |
+| Dia 0 | README.md + ROADMAP.md      | ✅ Completo |
+| Dia 1 | Página Examples + Resources | ✅ Completo |
+| Dia 2 | Deploy Vercel + Nav         | ✅ Completo |
+| Dia 3 | Testes + Performance        | ⏳ Próximo  |
 
 ---
 

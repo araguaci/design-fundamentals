@@ -101,12 +101,12 @@ O projeto utiliza uma paleta de cores moderna e acessível:
 
 ## 🌐 Rotas Disponíveis
 
-| Rota         | Página                     | Status                |
-| ------------ | -------------------------- | --------------------- |
-| `/`          | Homepage (Artigo completo) | ✅ Completa    |
-| `/examples`  | Exemplos Práticos          | ✅ Completa    |
-| `/resources` | Recursos & Downloads       | ✅ Completa    |
-| `*`          | Página não encontrada      | ✅ Completa    |
+| Rota         | Página                     | Status      |
+| ------------ | -------------------------- | ----------- |
+| `/`          | Homepage (Artigo completo) | ✅ Completa |
+| `/examples`  | Exemplos Práticos          | ✅ Completa |
+| `/resources` | Recursos & Downloads       | ✅ Completa |
+| `*`          | Página não encontrada      | ✅ Completa |
 
 ## 📚 Recursos Úteis
 
@@ -156,6 +156,7 @@ Veja o arquivo [ROADMAP.md](./ROADMAP.md) para detalhes completos do plano de a�
 Este projeto está configurado para deploy automático no Vercel com CI/CD integrado.
 
 #### Configuração (vercel.json)
+
 ```json
 {
   "buildCommand": "pnpm build",
