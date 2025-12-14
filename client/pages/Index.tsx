@@ -1,8 +1,12 @@
+import Navigation from "@/components/Navigation";
+
 export default function Index() {
   return (
     <div className="min-h-screen bg-white dark:bg-background">
+      <Navigation />
+
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white dark:bg-background border-b border-border">
+      <header className="bg-gradient-to-br from-primary/5 to-secondary/5 border-b border-border">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
             Design Fundamentals
