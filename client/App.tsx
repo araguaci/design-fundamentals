@@ -33,8 +33,9 @@ const App = () => (
 );
 
 const rootElement = document.getElementById("root");
-if (rootElement && !rootElement._reactRootContainer) {
-  createRoot(rootElement).render(
+if (rootElement) {
+  const root = createRoot(rootElement);
+  root.render(
     <StrictMode>
       <App />
     </StrictMode>
