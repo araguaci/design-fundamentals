@@ -20,9 +20,6 @@ export default function Index() {
         {/* Article Header */}
         <article className="prose prose-sm sm:prose dark:prose-invert max-w-none">
           <div className="mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold leading-tight text-foreground mb-4">
-              The 5 UI Fundamentals a Developer Must Know
-            </h2>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-sm text-muted-foreground">
               <span className="font-medium">By Jeferson Brito</span>
               <span>October 28, 2025</span>
