@@ -153,24 +153,61 @@ Veja o arquivo [ROADMAP.md](./ROADMAP.md) para detalhes completos do plano de a�
 
 ### Deploy para Vercel
 
-Este projeto está pronto para deploy no Vercel. O processo é automático:
+Este projeto está configurado para deploy automático no Vercel com CI/CD integrado.
 
-1. **Conectar repositório**:
-   - Acesse [Vercel](https://vercel.com) e faça login
-   - Clique em "New Project" e selecione o repositório
+#### Configuração (vercel.json)
+```json
+{
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist/spa",
+  "framework": "vite",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+```
 
-2. **Configuração automática**:
-   - Vercel detecta automaticamente que é um projeto Vite
-   - Usa `pnpm install` por padrão
+#### Passo a Passo para Deploy
 
-3. **Variáveis de ambiente**:
-   - Configure em `Settings > Environment Variables` se necessário
+1. **Conectar repositório** (primeira vez):
+   - Acesse [Vercel](https://vercel.com) e faça login com sua conta
+   - Clique em "New Project"
+   - Selecione seu repositório (GitHub/GitLab/Bitbucket)
+   - Vercel detectará automaticamente Vite como framework
 
-4. **Deploy**:
-   - Cada push para `main` faz deploy automático
-   - Visualize em `https://<project-name>.vercel.app`
+2. **Build & Deploy automático**:
+   - Configurações já estão no `vercel.json`
+   - Cada `git push` para `main` faz deploy automático
+   - Branch preview para pull requests
 
-**Status**: Pronto para deploy ✅
+3. **Variáveis de ambiente** (se necessário):
+   - Configure em `Settings > Environment Variables`
+   - Exemplo: `NODE_ENV=production`
+
+4. **Acessar a aplicação**:
+   - URL padrão: `https://<seu-projeto>.vercel.app`
+   - Domínio customizado: Configure em `Settings > Domains`
+
+#### Features de Segurança Habilitadas
+
+- ✅ Cache Control headers (3600s)
+- ✅ X-Content-Type-Options: nosniff
+- ✅ X-Frame-Options: DENY
+- ✅ X-XSS-Protection: 1; mode=block
+- ✅ Cache immutable para `/assets/*` (31536000s)
+
+#### Monitoramento & Analytics
+
+- Dashboard automático no Vercel
+- Logs de build e deployment
+- Performance metrics
+- Error tracking
+
+**Status**: ✅ Configurado e Pronto para Deploy
 
 ## 🧪 Testes
 
