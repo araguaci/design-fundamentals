@@ -159,9 +159,9 @@ TOTAL:                  30 minutos
 
 ### 3.1 Configurar Deploy para Vercel
 
-**Prioridade**: 🟠 ALTO  
-**Timeline**: 1 hora  
-**Status**: ⏳ Pendente
+**Prioridade**: 🟠 ALTO
+**Timeline**: 1 hora
+**Status**: ✅ COMPLETO
 
 #### Descrição
 
