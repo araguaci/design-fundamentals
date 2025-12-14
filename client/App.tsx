@@ -1,5 +1,6 @@
 import "./global.css";
 
+import { StrictMode } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { createRoot } from "react-dom/client";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -31,4 +32,11 @@ const App = () => (
   </QueryClientProvider>
 );
 
-createRoot(document.getElementById("root")!).render(<App />);
+const rootElement = document.getElementById("root");
+if (rootElement && !rootElement._reactRootContainer) {
+  createRoot(rootElement).render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+}
