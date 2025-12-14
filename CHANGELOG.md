@@ -354,7 +354,7 @@ Nenhuma nova dependência foi adicionada. Projeto usa:
 
 Planejadas para próximas sprints:
 
-- [ ] Deploy em produção (Vercel)
+- [x] Deploy em produção (Vercel) ✅
 - [ ] Suite de testes (Vitest)
 - [ ] Performance optimization
 - [ ] Dark mode toggle (next-themes)
@@ -365,7 +365,8 @@ Planejadas para próximas sprints:
 
 ---
 
-**Data**: 14 de Dezembro de 2024  
-**Versão**: 1.1.0  
-**Status**: Em Produção 🚀  
-**Próxima Release**: v1.2.0 (com Deploy + Testes)
+**Data**: 14 de Dezembro de 2024
+**Versão**: 1.1.0
+**Status**: ✅ Pronto para Deploy
+**Deploy**: Configurado com vercel.json
+**Próxima Release**: v1.2.0 (com Testes + Performance)
