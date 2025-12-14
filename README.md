@@ -103,10 +103,10 @@ O projeto utiliza uma paleta de cores moderna e acessível:
 
 | Rota         | Página                     | Status                |
 | ------------ | -------------------------- | --------------------- |
-| `/`          | Homepage (Artigo completo) | ✅ Completa           |
-| `/examples`  | Exemplos Práticos          | 🔄 Em Desenvolvimento |
-| `/resources` | Recursos & Downloads       | 🔄 Em Desenvolvimento |
-| `*`          | Página não encontrada      | ✅ Completa           |
+| `/`          | Homepage (Artigo completo) | ✅ Completa    |
+| `/examples`  | Exemplos Práticos          | ✅ Completa    |
+| `/resources` | Recursos & Downloads       | ✅ Completa    |
+| `*`          | Página não encontrada      | ✅ Completa    |
 
 ## 📚 Recursos Úteis
 
