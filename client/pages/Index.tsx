@@ -5,13 +5,13 @@ export default function Index() {
     <div className="min-h-screen bg-white dark:bg-background">
       <Navigation />
 
-      {/* Header */}
+      {/* Page Header */}
       <header className="bg-gradient-to-br from-primary/5 to-secondary/5 border-b border-border">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
-          <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
-            Design Fundamentals
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
+            The 5 UI Fundamentals
           </h1>
-          <p className="text-muted-foreground mt-1">Learn the 5 essential principles</p>
+          <p className="text-lg text-muted-foreground">Essential principles every developer should know</p>
         </div>
       </header>
 
