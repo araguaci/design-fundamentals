@@ -2,12 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
-import LocaleSelector from "./LocaleSelector";
-import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useTranslation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -34,33 +31,25 @@ export default function Navigation() {
               to="/"
               className="px-4 py-2 rounded-lg text-foreground hover:bg-muted transition-colors font-medium"
             >
-              {t('nav.home')}
+              Home
             </Link>
             <Link
               to="/examples"
               className="px-4 py-2 rounded-lg text-foreground hover:bg-muted transition-colors font-medium"
             >
-              {t('nav.examples')}
+              Exemplos
             </Link>
             <Link
               to="/resources"
               className="px-4 py-2 rounded-lg text-foreground hover:bg-muted transition-colors font-medium"
             >
-              {t('nav.resources')}
+              Recursos
             </Link>
-            <Link
-              to="/best-practices"
-              className="px-4 py-2 rounded-lg text-foreground hover:bg-muted transition-colors font-medium"
-            >
-              {t('nav.bestPractices')}
-            </Link>
-            <LocaleSelector />
             <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button + Theme Toggle */}
           <div className="sm:hidden flex items-center gap-2">
-            <LocaleSelector />
             <ThemeToggle />
             <button
               onClick={toggleMenu}
@@ -84,28 +73,21 @@ export default function Navigation() {
               className="block px-4 py-2 rounded-lg text-foreground hover:bg-muted transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
-              {t('nav.home')}
+              Home
             </Link>
             <Link
               to="/examples"
               className="block px-4 py-2 rounded-lg text-foreground hover:bg-muted transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
-              {t('nav.examples')}
+              Exemplos
             </Link>
             <Link
               to="/resources"
               className="block px-4 py-2 rounded-lg text-foreground hover:bg-muted transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
-              {t('nav.resources')}
-            </Link>
-            <Link
-              to="/best-practices"
-              className="block px-4 py-2 rounded-lg text-foreground hover:bg-muted transition-colors font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              {t('nav.bestPractices')}
+              Recursos
             </Link>
           </div>
         )}
