@@ -2,6 +2,27 @@
 
 Todas as mudanças, adições e melhorias ao projeto documentadas aqui.
 
+## [v2.0.0] - 2026-08-16
+
+### 🚀 Masterpiece Edition: Cyber-Growth Design System (@artesdosul)
+
+#### 🎨 Design System & Estética
+- **Paleta Cyber-Growth Oficial**: `--bg-primary: #050505`, superfícies em glassmorphism (`rgba(18, 18, 22, 0.75)`), acentos em Laranja Neon (`#ff6b35`), Ciano (`#00d9ff`) e Verde (`#10b981`).
+- **Tipografia Premium**: Integração das famílias `Bricolage Grotesque` (Display), `JetBrains Mono` (Technical) e `Inter` (Body).
+- **Hero Cinematográfico**: Banner gerado com IA e overlay dinâmico com badge de autoridade flutuante.
+
+#### ⚡ Funcionalidades Interativas & Ferramentas
+- **GrowthTracker**: Checklist com 15 itens de validação de UI, cálculo de score de maestria (0-100%) e persistência no `localStorage`.
+- **ColorPlayground**: Simulador interativo da regra 60-30-10 com cópia de tokens CSS em 1 clique.
+- **ContrastPlayground**: Calculadora em tempo real de conformidade com WCAG 2.1 (AA e AAA).
+- **TypographyPlayground**: Testador de escala tipográfica, tracking e line-height.
+- **Busca e Filtro em Tempo Real**: Filtragem instantânea de tópicos e fundamentos na tela.
+
+#### 🏛️ PWA & Infraestrutura
+- **PWA Standalone**: Configurado `manifest.json`, service worker `sw.js` para cache offline e tags Open Graph / Twitter.
+- **Rodapé Branded**: Assinatura oficial com link estilizado apontando para `@artesdosul` (`https://artesdosul.com/`).
+- **Resolução de DNS Vercel**: Documentado guia de solução para `DNS_PROBE_POSSIBLE` em `TROUBLESHOOTING_DNS_VERCEL.md`.
+
 ## [v1.1.0] - 2024-12-14
 
 ### 🎨 Novas Páginas Implementadas

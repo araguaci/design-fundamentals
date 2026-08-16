@@ -81,14 +81,18 @@ git push origin main
 
 ✅ Vercel detectará e fará deploy automaticamente!
 
-## 🌐 Passo 5: Configurar Domínio Customizado (Opcional)
+## 🌐 Passo 5: Configurar Domínio Customizado (`design.artesdosul.com`)
 
-Se você tiver um domínio próprio:
+Se você for utilizar o subdomínio oficial `design.artesdosul.com`:
 
-1. Vá para projeto → **Settings** → **Domains**
-2. Clique em **"Add"**
-3. Digite seu domínio (ex: `design-fundamentals.com`)
-4. Configure DNS conforme instruções do Vercel
+1. Vá para o projeto no Vercel → **Settings** → **Domains**
+2. Clique em **"Add"** e insira: `design.artesdosul.com`
+3. Configure o registro DNS no seu provedor (ex: Cloudflare / Registro.br):
+   - **Tipo**: `CNAME`
+   - **Nome**: `design`
+   - **Valor**: `cname.vercel-dns.com`
+   - **Proxy**: *DNS Only / Desativado* durante a emissão do SSL
+4. Caso enfrente erro de resolução ou `DNS_PROBE_POSSIBLE`, consulte o guia detalhado em [TROUBLESHOOTING_DNS_VERCEL.md](file:///d:/_deploy/design-fundamentals/TROUBLESHOOTING_DNS_VERCEL.md).
 
 ## 🔐 Variáveis de Ambiente
 
