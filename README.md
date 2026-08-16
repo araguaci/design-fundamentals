@@ -1,5 +1,13 @@
 # Design Fundamentals - UI Design Education Platform
 
+## 🛡️ Sentinel Status
+- **Status:** 🟢 Produção
+- **Tier:** S
+- **Health:** 98% / **ROI Potencial:** Educacional / Portfólio de Alta Conversão
+- **Stack:** React 18, TypeScript, Vite, TailwindCSS 3, Radix UI, PWA
+
+---
+
 Um aplicativo moderno e responsivo que ensina os 5 fundamentos essenciais de UI Design que todo desenvolvedor deve conhecer. Baseado no artigo de Jeferson Brito sobre design para desenvolvedores.
 
 ## 🎯 Visão Geral
