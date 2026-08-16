@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
+import MasterpieceFooter from "@/components/MasterpieceFooter";
+import { Sparkles, Terminal } from "lucide-react";
 
 export default function Examples() {
   const [activeTab, setActiveTab] = useState<
@@ -7,18 +9,23 @@ export default function Examples() {
   >("color");
 
   return (
-    <div className="min-h-screen bg-white dark:bg-background">
+    <div className="min-h-screen bg-[#050505] text-slate-100 selection:bg-[#ff6b35] selection:text-black">
       <Navigation />
 
       {/* Page Header */}
-      <header className="bg-gradient-to-br from-primary/10 to-secondary/10 border-b border-border">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Exemplos Práticos
+      <header className="relative border-b border-white/10 overflow-hidden bg-gradient-to-b from-[#121218] to-[#050505]">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-cyber-cyan/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 relative z-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-cyan/10 border border-cyber-cyan/30 text-cyber-cyan text-xs font-mono mb-4">
+            <Terminal className="w-3.5 h-3.5" />
+            <span>Laboratório de Código & UI Interativa</span>
+          </div>
+          <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-white mb-3">
+            Exemplos Práticos de Design
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-slate-300 max-w-2xl font-sans">
             Veja na prática como cada um dos 5 fundamentos é aplicado em
-            interfaces reais
+            componentes e layouts reais de alta conversão.
           </p>
         </div>
       </header>
@@ -1067,13 +1074,7 @@ export default function Examples() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-muted/50 mt-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-          <p className="text-sm text-muted-foreground text-center">
-            © 2025 Design Fundamentals. Exemplos práticos para desenvolvedores.
-          </p>
-        </div>
-      </footer>
+      <MasterpieceFooter />
     </div>
   );
 }

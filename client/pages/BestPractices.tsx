@@ -1,25 +1,31 @@
 import Navigation from "@/components/Navigation";
+import MasterpieceFooter from "@/components/MasterpieceFooter";
 import { useTranslation } from "@/hooks/useTranslation";
-import { CheckCircle2, XCircle, AlertCircle, Lightbulb, ExternalLink } from "lucide-react";
+import { CheckCircle2, XCircle, AlertCircle, Lightbulb, ExternalLink, Sparkles, ShieldCheck } from "lucide-react";
 
 export default function BestPractices() {
   const { t, locale } = useTranslation();
   const isPT = locale === 'pt_BR';
 
   return (
-    <div className="min-h-screen bg-white dark:bg-background">
+    <div className="min-h-screen bg-[#050505] text-slate-100 selection:bg-[#ff6b35] selection:text-black">
       <Navigation />
 
       {/* Page Header */}
-      <header className="bg-gradient-to-br from-primary/10 to-secondary/10 border-b border-border">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            {isPT ? '🎯 Boas Práticas' : '🎯 Best Practices'}
+      <header className="relative border-b border-white/10 overflow-hidden bg-gradient-to-b from-[#121218] to-[#050505]">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-cyber-green/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 relative z-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-green/10 border border-cyber-green/30 text-cyber-green text-xs font-mono mb-4">
+            <ShieldCheck className="w-3.5 h-3.5" />
+            <span>Engenharia de Frontend & Boas Práticas Pro</span>
+          </div>
+          <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-white mb-3">
+            {isPT ? 'Boas Práticas de UI/UX' : 'UI/UX Best Practices'}
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-slate-300 max-w-2xl font-sans">
             {isPT 
-              ? 'Guia avançado de implementação do Design System Master'
-              : 'Advanced implementation guide for Design System Master'}
+              ? 'Guia avançado de implementação técnica, microinterações, acessibilidade e performance.'
+              : 'Advanced implementation guide for technical UX, microinteractions, accessibility, and performance.'}
           </p>
         </div>
       </header>
@@ -692,15 +698,7 @@ export default function BestPractices() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-muted/50 mt-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-          <p className="text-sm text-muted-foreground text-center">
-            {isPT 
-              ? '© 2025 Design Fundamentals. Boas práticas para desenvolvedores.'
-              : '© 2025 Design Fundamentals. Best practices for developers.'}
-          </p>
-        </div>
-      </footer>
+      <MasterpieceFooter />
     </div>
   );
 }

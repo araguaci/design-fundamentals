@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import MasterpieceFooter from "@/components/MasterpieceFooter";
 import {
   ExternalLink,
   Download,
@@ -8,6 +9,8 @@ import {
   Eye,
   Zap,
   Github,
+  Sparkles,
+  Layers
 } from "lucide-react";
 
 export default function Resources() {
@@ -181,17 +184,22 @@ export default function Resources() {
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-background">
+    <div className="min-h-screen bg-[#050505] text-slate-100 selection:bg-[#ff6b35] selection:text-black">
       <Navigation />
 
       {/* Page Header */}
-      <header className="bg-gradient-to-br from-secondary/10 to-accent/10 border-b border-border">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Recursos & Downloads
+      <header className="relative border-b border-white/10 overflow-hidden bg-gradient-to-b from-[#121218] to-[#050505]">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-cyber-orange/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 relative z-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyber-orange/10 border border-cyber-orange/30 text-cyber-orange text-xs font-mono mb-4">
+            <Layers className="w-3.5 h-3.5" />
+            <span>Biblioteca de Recursos & Ferramentas Pro</span>
+          </div>
+          <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-white mb-3">
+            Recursos, Ferramentas & Downloads
           </h1>
-          <p className="text-lg text-muted-foreground">
-            Ferramentas, documentação e checklists para aplicar os 5 fundamentos
+          <p className="text-base sm:text-lg text-slate-300 max-w-2xl font-sans">
+            Ferramentas selecionadas a dedo, documentações oficiais e checklists de validação rápida para o seu design system.
           </p>
         </div>
       </header>
@@ -433,14 +441,7 @@ export default function Resources() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-muted/50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-          <p className="text-sm text-muted-foreground text-center">
-            © 2025 Design Fundamentals. Recursos para designers e
-            desenvolvedores.
-          </p>
-        </div>
-      </footer>
+      <MasterpieceFooter />
     </div>
   );
 }
