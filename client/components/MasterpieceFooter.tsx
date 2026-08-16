@@ -1,4 +1,5 @@
-import { Sparkles, ArrowUp, Github, Heart, Shield, Terminal } from "lucide-react";
+import { useEffect } from "react";
+import { Sparkles, ArrowUp, Shield, Terminal, Eye } from "lucide-react";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export default function MasterpieceFooter() {
@@ -7,6 +8,30 @@ export default function MasterpieceFooter() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    // Carrega o script do contador de visitas da Artes do Sul
+    const scriptId = "ads-counter-script";
+    const existingScript = document.getElementById(scriptId);
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    const script = document.createElement("script");
+    script.id = scriptId;
+    script.defer = true;
+    script.src = "https://stats.artesdosul.com/c.js";
+    script.setAttribute("data-site", "OhK672VcFpAWdkkFbwzM");
+    script.setAttribute("data-key", "pk_783c7d968bbfc19c87d7df29ffa50053");
+    script.setAttribute("data-target", "#ads-counter");
+
+    document.body.appendChild(script);
+
+    return () => {
+      const el = document.getElementById(scriptId);
+      if (el) el.remove();
+    };
+  }, []);
 
   return (
     <footer className="relative border-t border-white/10 bg-[#050505] text-slate-400 mt-20 overflow-hidden">
@@ -102,8 +127,21 @@ export default function MasterpieceFooter() {
           </div>
         </div>
 
+        {/* Centered Visits Counter Section */}
+        <div className="my-8 py-4 border-y border-white/10 flex flex-col items-center justify-center text-center">
+          <div className="inline-flex items-center gap-2 mb-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/10 text-xs font-mono text-slate-400">
+            <Eye className="w-3.5 h-3.5 text-cyber-cyan" />
+            <span>Métricas de Visitas em Tempo Real</span>
+          </div>
+          {/* Target Element for the Visits Counter Snippet */}
+          <div
+            id="ads-counter"
+            className="flex items-center justify-center min-h-[28px] font-mono text-sm font-bold text-white transition-all"
+          ></div>
+        </div>
+
         {/* Bottom Bar with Mandatory Signature */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
           <div className="flex items-center gap-2 text-slate-400">
             <span>Uma criação</span>
             <a
