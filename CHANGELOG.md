@@ -2,6 +2,40 @@
 
 Todas as mudanças, adições e melhorias ao projeto documentadas aqui.
 
+## [v2.1.0] - 2026-08-18
+
+### 🎨 Recriação de Ícones Conceituais & Novos Laboratórios de Frontend/UX
+
+#### 🏛️ Ícones de Sistema & Suíte PWA 2026
+- **Recriação Completa dos Ícones**: Gerada suíte completa baseada no propósito dos 5 fundamentos de UI/UX e na identidade *Cyber-Growth* (`scripts/generate-icons.js` com Sharp e png-to-ico).
+- **Ativos de Alta Resolução (`/public`)**: `favicon.svg` vetorial com grid suíço e marcações de alinhamento, `favicon.ico` multi-resolução (16/32/48/64px), `apple-touch-icon.png` (180x180), `icon-192.png`, `icon-512.png`, `icon-maskable-192.png` e `icon-maskable-512.png`.
+- **Manifesto PWA Atualizado**: `manifest.json` com especificações PWA 2026 (orientação, categorias, shortcuts rápidos para ferramentas).
+- **Componentes SVG Proprietários (`FundamentalIcons.tsx`)**:
+  - `DFLogoIcon`: Monograma com glow e marcadores de canto.
+  - `ColorPillarIcon`: Abertura cromática e harmonia em tríade com nós orbitais.
+  - `TypographyPillarIcon`: Glifo 'Aa' suíço com réguas de métrica (*cap-height*, *x-height*, *baseline*).
+  - `HierarchyPillarIcon`: Pilha isométrica 3D com elevação focal.
+  - `ContrastPillarIcon`: Lente óptica bipartida com indicador de proporção WCAG.
+  - `AlignmentPillarIcon`: Grade suíça colunar com mira magnética e pontos de ancoragem áurea.
+
+#### 🧪 Novos Laboratórios & Ferramentas Interativas
+- **`ResponsiveLab.tsx` (Container Queries & Tipografia Fluida)**:
+  - Redimensionador interativo de contêiner (280px a 780px) com transição de layouts (*Card Compacto* -> *Banner Horizontal* -> *Widget de Análise 3 Colunas*).
+  - Calculadora e gerador de código para `clamp()` com ajuste de viewports e tamanhos.
+- **`MotionPlayground.tsx` (Física de Movimento & Micro-Interações)**:
+  - Palco de teste de aceleração com curvas `cubic-bezier` (*Cyber Spring*, *Smooth Ease-Out*, *Snappy Pop*).
+  - Demos táteis com feedback de clique ativo (*scale 95%*), efeito magnético de borda e indicadores de *pulse liveness*.
+- **`DesignTokensExporter.tsx` (Gerador & Exportador de Tokens)**:
+  - Customização de paleta e presets (*Cyber-Growth*, *Linear Obsidian*, *Stripe Indigo*, *Vercel Neon*).
+  - Exportação direta para `tailwind.config.ts`, `CSS Variables (:root)` e `JSON Tokens`.
+
+#### 🧭 Integração de Navegação e Páginas
+- **Exemplos Práticos (`/examples`)**: Adicionadas abas para `Responsivo & Container`, `Motion & Easing` e `Tokens Export`.
+- **Recursos (`/resources`)**: Integrado o exportador de design tokens para uso imediato em projetos.
+- **Header & Footer**: Sincronizados com o novo `DFLogoIcon` e ícones conceituais.
+
+---
+
 ## [v2.0.0] - 2026-08-16
 
 ### 🚀 Masterpiece Edition: Cyber-Growth Design System (@artesdosul)

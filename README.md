@@ -3,28 +3,32 @@
 ## 🛡️ Sentinel Status
 - **Status:** 🟢 Produção
 - **Tier:** S
-- **Health:** 98% / **ROI Potencial:** Educacional / Portfólio de Alta Conversão
-- **Stack:** React 18, TypeScript, Vite, TailwindCSS 3, Radix UI, PWA
+- **Health:** 100% / **ROI Potencial:** Educacional / Portfólio de Alta Conversão
+- **Stack:** React 18, TypeScript, Vite, TailwindCSS 3, Radix UI, PWA 2026, Sharp
 
 ---
 
-Um aplicativo moderno e responsivo que ensina os 5 fundamentos essenciais de UI Design que todo desenvolvedor deve conhecer. Baseado no artigo de Jeferson Brito sobre design para desenvolvedores.
+Um aplicativo moderno e responsivo que ensina os 5 fundamentos essenciais de UI Design que todo desenvolvedor deve conhecer. Baseado no artigo de Jeferson Brito sobre design para desenvolvedores e estendido com a arquitetura **Cyber-Growth Masterpiece** por **@artesdosul**.
 
 ## 🎯 Visão Geral
 
-Este projeto é uma plataforma educacional interativa que apresenta conceitos fundamentais de UI Design:
+Este projeto é uma plataforma educacional interativa que apresenta conceitos fundamentais e avançados de UI/UX:
 
-- **Color** - Teoria das cores e aplicação em interfaces
-- **Typography** - Arte de arranjar tipos para melhor legibilidade
-- **Visual Hierarchy** - Guiar usuários através da importância dos elementos
-- **Contrast** - Fazer elementos se destacarem com acessibilidade
-- **Alignment** - Criar ordem e equilíbrio no layout
+- **Color (Cor)** - Teoria cromática, harmonias (monocromático, análogo, complementar, triádico) e regra 60-30-10
+- **Typography (Tipografia)** - Métricas de tipos (*cap-height*, *x-height*, *baseline*), escalas modulares e tipografia fluida com `clamp()`
+- **Visual Hierarchy (Hierarquia Visual)** - Padrões de escaneamento F/Z, peso visual e profundidade em camadas
+- **Contrast (Contraste)** - Relações de luminescência WCAG 2.1 (AA 4.5:1 e AAA 7:1) com calculadora interativa em tempo real
+- **Alignment (Alinhamento)** - Grid de 8 pontos, ritmo vertical e layout suíço colunar
+- **Responsive Architecture** - Container Queries (`@container`) e componentes que se adaptam ao espaço do pai
+- **Motion & Micro-interactions** - Curvas de aceleração `cubic-bezier` (Cyber Spring, Snappy Pop) e feedback tátil
+- **Design Tokens Exporter** - Gerador e exportador de tokens para Tailwind, CSS Variables e JSON
 
 ## 📦 Tech Stack
 
 - **Frontend**: React 18 + React Router 6 (SPA) + TypeScript + Vite
-- **Styling**: TailwindCSS 3 + CSS personalizado
-- **UI Components**: Radix UI + Lucide React icons
+- **Styling**: TailwindCSS 3 + CSS personalizado (Cyber-Growth Design System)
+- **UI Components**: Radix UI + Lucide React + Ícones Vetoriais Proprietários (`FundamentalIcons.tsx`)
+- **PWA**: Manifest PWA 2026, Service Worker com cache offline e suíte de ícones multi-resolução
 - **Internationalization**: Sistema i18n customizado (pt_BR/en)
 - **Theme**: Dark/Light mode com ThemeManager
 - **Testing**: Vitest
@@ -66,6 +70,7 @@ pnpm start        # Inicia o servidor de produção
 pnpm test         # Executa os testes com Vitest
 pnpm typecheck    # Verifica tipos TypeScript
 pnpm format.fix   # Formata o código com Prettier
+node scripts/generate-icons.js # Gera todos os ícones PWA e favicons em alta definição
 ```
 
 ## 📁 Estrutura do Projeto
@@ -74,16 +79,27 @@ pnpm format.fix   # Formata o código com Prettier
 design-fundamentals/
 ├── client/                    # Frontend React SPA
 │   ├── pages/                # Componentes de página (rotas)
-│   │   ├── Index.tsx        # Homepage - artigo completo
-│   │   ├── Examples.tsx     # Exemplos práticos dos 5 fundamentos
-│   │   ├── Resources.tsx    # Recursos e downloads
+│   │   ├── Index.tsx        # Homepage - artigo completo + simuladores
+│   │   ├── Examples.tsx     # Exemplos práticos, Container Queries & Motion
+│   │   ├── Resources.tsx    # Recursos, downloads e exportador de tokens
 │   │   ├── BestPractices.tsx # Boas práticas de UI/UX
 │   │   └── NotFound.tsx     # Página 404
 │   ├── components/
+│   │   ├── icons/
+│   │   │   └── FundamentalIcons.tsx # Ícones SVG proprietários dos 5 pilares e DF Logo
 │   │   ├── ui/              # Componentes Radix UI + customizados
-│   │   ├── Navigation.tsx   # Barra de navegação
-│   │   ├── ThemeToggle.tsx  # Toggle de tema (dark/light)
-│   │   └── LocaleSelector.tsx # Seletor de idioma
+│   │   ├── ColorPlayground.tsx      # Simulador de cores e regra 60-30-10
+│   │   ├── ContrastPlayground.tsx   # Calculadora de contraste WCAG
+│   │   ├── TypographyPlayground.tsx # Testador tipográfico
+│   │   ├── ResponsiveLab.tsx        # Lab de Container Queries e clamp()
+│   │   ├── MotionPlayground.tsx     # Lab de curvas cubic-bezier e física
+│   │   ├── DesignTokensExporter.tsx # Exportador de tokens de design
+│   │   ├── GrowthTracker.tsx        # Rastreador de maestria gamificado
+│   │   ├── HeroSection.tsx          # Hero cinematográfico Cyber-Growth
+│   │   ├── MasterpieceFooter.tsx    # Rodapé institucional branded
+│   │   ├── Navigation.tsx           # Barra de navegação com DFLogoIcon
+│   │   ├── ThemeToggle.tsx          # Toggle de tema (dark/light)
+│   │   └── LocaleSelector.tsx       # Seletor de idioma
 │   ├── contexts/
 │   │   └── LocaleContext.tsx # Context para gerenciar idioma
 │   ├── hooks/
@@ -92,19 +108,30 @@ design-fundamentals/
 │   │   ├── i18n.ts          # Sistema de traduções
 │   │   └── theme-manager.ts  # Gerenciador de tema
 │   ├── App.tsx              # Configuração de rotas
-│   ├── global.css           # Estilos globais e tema
+│   ├── global.css           # Estilos globais e tema Cyber-Growth
 │   └── vite-env.d.ts
-├── server/                    # Backend Express
+├── public/                  # Ativos estáticos e PWA
+│   ├── favicon.svg          # Favicon vetorial ultra-nítido
+│   ├── favicon.ico          # Ícone multi-resolução (16/32/48/64px)
+│   ├── apple-touch-icon.png # Ícone iOS 180x180
+│   ├── icon-192.png / icon-512.png # Ícones PWA padrão
+│   ├── icon-maskable-192.png / icon-maskable-512.png # Ícones maskable Android
+│   ├── manifest.json        # Manifesto PWA completo com shortcuts
+│   └── sw.js                # Service Worker offline
+├── scripts/
+│   └── generate-icons.js    # Gerador de ativos de imagem com Sharp
+├── server/                  # Backend Express
 │   ├── index.ts             # Configuração do servidor
 │   ├── routes/              # Handlers de API
 │   └── node-build.ts        # Build para produção
-├── shared/                    # Tipos compartilhados
+├── shared/                  # Tipos compartilhados
 │   └── api.ts
 ├── tailwind.config.ts       # Configuração do Tailwind
 ├── tsconfig.json            # Configuração TypeScript
 ├── vite.config.ts           # Configuração Vite
 ├── vite.config.server.ts    # Configuração Vite para servidor
 ├── package.json
+├── CHANGELOG.md             # Histórico de versões
 ├── ROADMAP.md               # Plano de ação com timeline
 └── README.md               # Este arquivo
 ```

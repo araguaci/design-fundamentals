@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import MasterpieceFooter from "@/components/MasterpieceFooter";
+import DesignTokensExporter from "@/components/DesignTokensExporter";
 import {
   ExternalLink,
   Download,
@@ -346,6 +347,11 @@ export default function Resources() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Interactive Design Tokens Exporter */}
+        <section className="mb-16">
+          <DesignTokensExporter />
         </section>
 
         {/* Download Section */}

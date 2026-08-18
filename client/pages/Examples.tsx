@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import MasterpieceFooter from "@/components/MasterpieceFooter";
-import { Sparkles, Terminal } from "lucide-react";
+import ResponsiveLab from "@/components/ResponsiveLab";
+import MotionPlayground from "@/components/MotionPlayground";
+import DesignTokensExporter from "@/components/DesignTokensExporter";
+import { Sparkles, Terminal, Smartphone, Activity, Sliders, Palette, Zap } from "lucide-react";
 import {
   ColorPillarIcon,
   TypographyPillarIcon,
@@ -13,7 +16,7 @@ import {
 
 export default function Examples() {
   const [activeTab, setActiveTab] = useState<
-    "color" | "typography" | "hierarchy" | "contrast" | "alignment" | "design-system"
+    "color" | "typography" | "hierarchy" | "contrast" | "alignment" | "responsive" | "motion" | "design-system" | "tokens"
   >("color");
 
   return (
@@ -29,11 +32,10 @@ export default function Examples() {
             <span>Laboratório de Código & UI Interativa</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-display font-extrabold text-white mb-3">
-            Exemplos Práticos de Design
+            Exemplos Práticos & Laboratórios de UI
           </h1>
           <p className="text-base sm:text-lg text-slate-300 max-w-2xl font-sans">
-            Veja na prática como cada um dos 5 fundamentos é aplicado em
-            componentes e layouts reais de alta conversão.
+            Veja na prática como cada fundamento, container queries, física de movimento e design tokens são aplicados em componentes de alta conversão.
           </p>
         </div>
       </header>
@@ -41,10 +43,10 @@ export default function Examples() {
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {/* Tab Navigation */}
-        <div className="flex flex-wrap gap-2 sm:gap-3 mb-12 pb-4 border-b border-white/10">
+        <div className="flex flex-wrap gap-2 sm:gap-2.5 mb-12 pb-4 border-b border-white/10">
           <button
             onClick={() => setActiveTab("color")}
-            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-sm transition-all ${
+            className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all ${
               activeTab === "color"
                 ? "bg-gradient-to-r from-cyber-orange to-[#ff8c5a] text-black font-bold shadow-cyber-orange"
                 : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
@@ -55,7 +57,7 @@ export default function Examples() {
           </button>
           <button
             onClick={() => setActiveTab("typography")}
-            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-sm transition-all ${
+            className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all ${
               activeTab === "typography"
                 ? "bg-gradient-to-r from-cyber-cyan to-[#00b4d8] text-black font-bold shadow-cyber-cyan"
                 : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
@@ -66,7 +68,7 @@ export default function Examples() {
           </button>
           <button
             onClick={() => setActiveTab("hierarchy")}
-            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-sm transition-all ${
+            className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all ${
               activeTab === "hierarchy"
                 ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold shadow-lg shadow-purple-500/25"
                 : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
@@ -77,7 +79,7 @@ export default function Examples() {
           </button>
           <button
             onClick={() => setActiveTab("contrast")}
-            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-sm transition-all ${
+            className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all ${
               activeTab === "contrast"
                 ? "bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-bold shadow-lg shadow-amber-500/25"
                 : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
@@ -88,7 +90,7 @@ export default function Examples() {
           </button>
           <button
             onClick={() => setActiveTab("alignment")}
-            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-sm transition-all ${
+            className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all ${
               activeTab === "alignment"
                 ? "bg-gradient-to-r from-emerald-400 to-teal-500 text-black font-bold shadow-lg shadow-emerald-500/25"
                 : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
@@ -98,8 +100,41 @@ export default function Examples() {
             <span>Alinhamento</span>
           </button>
           <button
+            onClick={() => setActiveTab("responsive")}
+            className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all ${
+              activeTab === "responsive"
+                ? "bg-gradient-to-r from-sky-400 to-blue-500 text-black font-bold shadow-lg shadow-blue-500/25"
+                : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
+            }`}
+          >
+            <Smartphone className="w-4 h-4" />
+            <span>Responsivo & Container</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("motion")}
+            className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all ${
+              activeTab === "motion"
+                ? "bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white font-bold shadow-lg shadow-pink-500/25"
+                : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
+            }`}
+          >
+            <Activity className="w-4 h-4" />
+            <span>Motion & Easing</span>
+          </button>
+          <button
+            onClick={() => setActiveTab("tokens")}
+            className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all ${
+              activeTab === "tokens"
+                ? "bg-gradient-to-r from-cyber-orange to-yellow-500 text-black font-bold shadow-cyber-orange"
+                : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
+            }`}
+          >
+            <Palette className="w-4 h-4" />
+            <span>Tokens Export</span>
+          </button>
+          <button
             onClick={() => setActiveTab("design-system")}
-            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-sm transition-all ${
+            className={`inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all ${
               activeTab === "design-system"
                 ? "bg-white text-black font-bold shadow-lg shadow-white/20"
                 : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
@@ -1083,6 +1118,27 @@ export default function Examples() {
                 </ul>
               </div>
             </div>
+          </section>
+        )}
+
+        {/* Responsive Lab */}
+        {activeTab === "responsive" && (
+          <section className="space-y-8 animate-fade-in">
+            <ResponsiveLab />
+          </section>
+        )}
+
+        {/* Motion Playground */}
+        {activeTab === "motion" && (
+          <section className="space-y-8 animate-fade-in">
+            <MotionPlayground />
+          </section>
+        )}
+
+        {/* Tokens Exporter */}
+        {activeTab === "tokens" && (
+          <section className="space-y-8 animate-fade-in">
+            <DesignTokensExporter />
           </section>
         )}
       </main>
