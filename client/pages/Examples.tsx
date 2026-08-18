@@ -2,6 +2,14 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import MasterpieceFooter from "@/components/MasterpieceFooter";
 import { Sparkles, Terminal } from "lucide-react";
+import {
+  ColorPillarIcon,
+  TypographyPillarIcon,
+  HierarchyPillarIcon,
+  ContrastPillarIcon,
+  AlignmentPillarIcon,
+  DFLogoIcon,
+} from "@/components/icons/FundamentalIcons";
 
 export default function Examples() {
   const [activeTab, setActiveTab] = useState<
@@ -33,66 +41,72 @@ export default function Examples() {
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {/* Tab Navigation */}
-        <div className="flex flex-wrap gap-2 sm:gap-4 mb-12 pb-4 border-b border-border">
+        <div className="flex flex-wrap gap-2 sm:gap-3 mb-12 pb-4 border-b border-white/10">
           <button
             onClick={() => setActiveTab("color")}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all ${
+            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-sm transition-all ${
               activeTab === "color"
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                ? "bg-gradient-to-r from-cyber-orange to-[#ff8c5a] text-black font-bold shadow-cyber-orange"
+                : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
             }`}
           >
-            🎨 Cor
+            <ColorPillarIcon className="w-4 h-4" />
+            <span>Cor</span>
           </button>
           <button
             onClick={() => setActiveTab("typography")}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all ${
+            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-sm transition-all ${
               activeTab === "typography"
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                ? "bg-gradient-to-r from-cyber-cyan to-[#00b4d8] text-black font-bold shadow-cyber-cyan"
+                : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
             }`}
           >
-            ✏️ Tipografia
+            <TypographyPillarIcon className="w-4 h-4" />
+            <span>Tipografia</span>
           </button>
           <button
             onClick={() => setActiveTab("hierarchy")}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all ${
+            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-sm transition-all ${
               activeTab === "hierarchy"
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-bold shadow-lg shadow-purple-500/25"
+                : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
             }`}
           >
-            📊 Hierarquia
+            <HierarchyPillarIcon className="w-4 h-4" />
+            <span>Hierarquia</span>
           </button>
           <button
             onClick={() => setActiveTab("contrast")}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all ${
+            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-sm transition-all ${
               activeTab === "contrast"
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                ? "bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-bold shadow-lg shadow-amber-500/25"
+                : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
             }`}
           >
-            ⚡ Contraste
+            <ContrastPillarIcon className="w-4 h-4" />
+            <span>Contraste</span>
           </button>
           <button
             onClick={() => setActiveTab("alignment")}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all ${
+            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-sm transition-all ${
               activeTab === "alignment"
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                ? "bg-gradient-to-r from-emerald-400 to-teal-500 text-black font-bold shadow-lg shadow-emerald-500/25"
+                : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
             }`}
           >
-            📐 Alinhamento
+            <AlignmentPillarIcon className="w-4 h-4" />
+            <span>Alinhamento</span>
           </button>
           <button
             onClick={() => setActiveTab("design-system")}
-            className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium transition-all ${
+            className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-sm transition-all ${
               activeTab === "design-system"
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                ? "bg-white text-black font-bold shadow-lg shadow-white/20"
+                : "text-slate-400 hover:text-white hover:bg-white/5 border border-white/10"
             }`}
           >
-            🎨 Design System
+            <DFLogoIcon className="w-4 h-4" />
+            <span>Design System</span>
           </button>
         </div>
 

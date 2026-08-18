@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Sparkles, Trophy, CheckCircle2 } from "lucide-react";
+import { DFLogoIcon } from "./icons/FundamentalIcons";
 import ThemeToggle from "./ThemeToggle";
 import LocaleSelector from "./LocaleSelector";
 import { useTranslation } from "@/hooks/useTranslation";
@@ -52,10 +53,8 @@ export default function Navigation() {
             to="/"
             className="flex items-center gap-3 group transition-transform active:scale-95"
           >
-            <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-[#ff6b35] via-[#ff8f5e] to-[#00d9ff] p-0.5 shadow-cyber-orange transition-shadow group-hover:shadow-cyber-cyan">
-              <div className="w-full h-full bg-[#050505] rounded-[10px] flex items-center justify-center font-display font-extrabold text-white text-lg tracking-wider">
-                DF
-              </div>
+            <div className="relative shadow-cyber-orange transition-transform duration-300 group-hover:scale-105">
+              <DFLogoIcon className="w-10 h-10 drop-shadow-[0_0_12px_rgba(255,107,53,0.35)]" />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">

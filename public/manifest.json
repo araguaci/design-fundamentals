@@ -1,16 +1,85 @@
 {
   "name": "Design Fundamentals • Masterpiece Edition",
   "short_name": "DesignFund",
-  "description": "Os 5 Fundamentos de UI/UX que todo desenvolvedor deve dominar. Cyber-Growth Masterpiece por @artesdosul.",
+  "description": "Os 5 Fundamentos Vitais de UI/UX para Desenvolvedores. Interface Cyber-Growth Masterpiece por @artesdosul.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#050505",
   "theme_color": "#050505",
+  "categories": ["education", "design", "developer-tools"],
   "icons": [
     {
       "src": "/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "16x16 32x32 48x48 64x64",
       "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "5 Fundamentos",
+      "url": "/#fundamentals",
+      "description": "Aprenda os 5 fundamentos vitais de UI Design"
+    },
+    {
+      "name": "Exemplos Práticos",
+      "url": "/examples",
+      "description": "Veja demonstrações visuais e playgrounds"
+    },
+    {
+      "name": "Recursos & Ferramentas",
+      "url": "/resources",
+      "description": "Paletas, tipografia e bibliotecas selecionadas"
+    },
+    {
+      "name": "Boas Práticas",
+      "url": "/best-practices",
+      "description": "Diretrizes e checklists de UI/UX"
     }
   ]
 }

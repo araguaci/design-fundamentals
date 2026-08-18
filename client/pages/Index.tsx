@@ -8,11 +8,13 @@ import TypographyPlayground from "@/components/TypographyPlayground";
 import MasterpieceFooter from "@/components/MasterpieceFooter";
 import { useTranslation } from "@/hooks/useTranslation";
 import {
-  Palette,
-  Type,
-  Layers,
-  Eye,
-  AlignLeft,
+  ColorPillarIcon,
+  TypographyPillarIcon,
+  HierarchyPillarIcon,
+  ContrastPillarIcon,
+  AlignmentPillarIcon,
+} from "@/components/icons/FundamentalIcons";
+import {
   Search,
   Sparkles,
   CheckCircle2,
@@ -44,7 +46,7 @@ export default function Index() {
       accentColor: "from-[#ff6b35] to-[#ff8f5e]",
       accentBorder: "border-[#ff6b35]/30",
       accentText: "text-cyber-orange",
-      icon: Palette,
+      icon: ColorPillarIcon,
       description: t("home.color.description"),
       theoryTitle: t("home.color.theory.title"),
       theoryP1: t("home.color.theory.p1"),
@@ -76,7 +78,7 @@ export default function Index() {
       accentColor: "from-[#00d9ff] to-[#38bdf8]",
       accentBorder: "border-[#00d9ff]/30",
       accentText: "text-cyber-cyan",
-      icon: Type,
+      icon: TypographyPillarIcon,
       description: t("home.typography.description"),
       theoryTitle: t("home.typography.choosing.title"),
       theoryP1: t("home.typography.choosing.p1"),
@@ -109,7 +111,7 @@ export default function Index() {
       accentColor: "from-[#a855f7] to-[#c084fc]",
       accentBorder: "border-[#a855f7]/30",
       accentText: "text-purple-400",
-      icon: Layers,
+      icon: HierarchyPillarIcon,
       description: t("home.hierarchy.description"),
       theoryTitle: t("home.hierarchy.how.title"),
       theoryP1: t("home.hierarchy.how.p1"),
@@ -131,7 +133,7 @@ export default function Index() {
       playground: (
         <div className="glass-panel-glow rounded-2xl p-6 sm:p-8 border border-white/15">
           <div className="flex items-center gap-2 mb-2">
-            <Layers className="w-5 h-5 text-purple-400" />
+            <HierarchyPillarIcon className="w-5 h-5 text-purple-400" />
             <span className="text-xs font-mono uppercase font-bold text-purple-400 tracking-wider">
               Simulador Visual
             </span>
@@ -199,7 +201,7 @@ export default function Index() {
       accentColor: "from-[#eab308] to-[#facc15]",
       accentBorder: "border-[#eab308]/30",
       accentText: "text-amber-400",
-      icon: Eye,
+      icon: ContrastPillarIcon,
       description: t("home.contrast.description"),
       theoryTitle: t("home.contrast.accessibility.title"),
       theoryP1: t("home.contrast.accessibility.p1"),
@@ -229,7 +231,7 @@ export default function Index() {
       accentColor: "from-[#10b981] to-[#34d399]",
       accentBorder: "border-[#10b981]/30",
       accentText: "text-cyber-green",
-      icon: AlignLeft,
+      icon: AlignmentPillarIcon,
       description: t("home.alignment.description"),
       theoryTitle: "Alinhamento & Ritmo Vertical",
       theoryP1: t("home.alignment.p2"),
@@ -251,7 +253,7 @@ export default function Index() {
       playground: (
         <div className="glass-panel-glow rounded-2xl p-6 sm:p-8 border border-white/15">
           <div className="flex items-center gap-2 mb-2">
-            <AlignLeft className="w-5 h-5 text-cyber-green" />
+            <AlignmentPillarIcon className="w-5 h-5 text-cyber-green" />
             <span className="text-xs font-mono uppercase font-bold text-cyber-green tracking-wider">
               Grade & Ritmo
             </span>

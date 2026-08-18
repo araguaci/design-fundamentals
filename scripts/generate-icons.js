@@ -1,0 +1,235 @@
+import fs from 'fs';
+import path from 'path';
+import sharp from 'sharp';
+import pngToIco from 'png-to-ico';
+
+const publicDir = path.resolve('public');
+
+// Master Vector Icon for Design Fundamentals (Square 512x512 with safe padding)
+const createMasterSvg = ({ maskable = false } = {}) => {
+  const pad = maskable ? 50 : 20;
+  const innerSize = 512 - pad * 2;
+  
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0d14"/>
+      <stop offset="50%" stop-color="#050508"/>
+      <stop offset="100%" stop-color="#020204"/>
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="40%" stop-color="#ff9e00"/>
+      <stop offset="75%" stop-color="#00f5d4"/>
+      <stop offset="100%" stop-color="#7928ca"/>
+    </linearGradient>
+
+    <linearGradient id="orangeGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff8f5e"/>
+      <stop offset="100%" stop-color="#ff6b35"/>
+    </linearGradient>
+
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5d4"/>
+      <stop offset="100%" stop-color="#00b4d8"/>
+    </linearGradient>
+
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#7928ca"/>
+    </linearGradient>
+
+    <!-- Filters for Cyber Glow -->
+    <filter id="glowOrange" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Pattern for Swiss Grid Background -->
+    <pattern id="gridPattern" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(255,255,255,0.035)" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.5" fill="rgba(255,107,53,0.15)"/>
+    </pattern>
+  </defs>
+
+  <!-- Full Icon Background -->
+  ${maskable ? `
+    <rect width="512" height="512" fill="#050508"/>
+    <rect width="512" height="512" fill="url(#gridPattern)"/>
+  ` : `
+    <!-- Squircle Card -->
+    <rect x="16" y="16" width="480" height="480" rx="108" ry="108" fill="url(#bgGrad)"/>
+    <rect x="16" y="16" width="480" height="480" rx="108" ry="108" fill="url(#gridPattern)"/>
+    <rect x="16" y="16" width="480" height="480" rx="108" ry="108" fill="none" stroke="url(#borderGrad)" stroke-width="4.5" opacity="0.85"/>
+  `}
+
+  <g transform="translate(${maskable ? 20 : 0}, ${maskable ? 20 : 0})">
+    <!-- UI Layout Guides / Alignment Marks (Fund. 5: Alignment) -->
+    <g opacity="0.4">
+      <!-- Alignment Crosshairs -->
+      <line x1="86" y1="120" x2="86" y2="392" stroke="#00f5d4" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <line x1="426" y1="120" x2="426" y2="392" stroke="#00f5d4" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <line x1="120" y1="86" x2="392" y2="86" stroke="#ff6b35" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <line x1="120" y1="426" x2="392" y2="426" stroke="#ff6b35" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+      <!-- Corner Alignment Bracket Marks -->
+      <path d="M 76 100 L 76 76 L 100 76" fill="none" stroke="#ff6b35" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 436 100 L 436 76 L 412 76" fill="none" stroke="#00f5d4" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 76 412 L 76 436 L 100 436" fill="none" stroke="#00f5d4" stroke-width="3" stroke-linecap="round"/>
+      <path d="M 436 412 L 436 436 L 412 436" fill="none" stroke="#ff6b35" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Visual Hierarchy Stack Planes (Fund. 3: Hierarchy) -->
+    <g opacity="0.3" transform="translate(0, -6)">
+      <!-- Tier 3 Back -->
+      <rect x="180" y="96" width="152" height="42" rx="8" fill="#7928ca" opacity="0.4"/>
+      <!-- Tier 2 Mid -->
+      <rect x="160" y="108" width="192" height="42" rx="10" fill="#00f5d4" opacity="0.5"/>
+    </g>
+
+    <!-- Contrast High-Luminance Indicator Aperture (Fund. 4: Contrast) -->
+    <g transform="translate(256, 126)">
+      <circle cx="0" cy="0" r="28" fill="#000000" stroke="url(#borderGrad)" stroke-width="2.5"/>
+      <!-- Split High-Contrast Hemisphere -->
+      <path d="M 0 -28 A 28 28 0 0 1 0 28 Z" fill="#ffffff"/>
+      <path d="M 0 -28 A 28 28 0 0 0 0 28 Z" fill="#ff6b35"/>
+      <!-- Contrast Ratio Pip -->
+      <circle cx="0" cy="0" r="6" fill="#050508" stroke="#00f5d4" stroke-width="2"/>
+    </g>
+
+    <!-- Color Harmony Chromatic Spectrum Orb (Fund. 1: Color) -->
+    <g transform="translate(108, 256)" filter="url(#subtleGlow)">
+      <circle cx="0" cy="0" r="24" fill="url(#orangeGlow)"/>
+      <circle cx="0" cy="0" r="14" fill="#050508"/>
+      <circle cx="0" cy="0" r="6" fill="#ff6b35"/>
+      <!-- Small Satellites -->
+      <circle cx="-16" cy="-20" r="5" fill="#00f5d4"/>
+      <circle cx="20" cy="-14" r="4" fill="#ffd166"/>
+      <circle cx="16" cy="18" r="5" fill="#c084fc"/>
+    </g>
+
+    <!-- Typography Guide Ruler & Marker (Fund. 2: Typography) -->
+    <g transform="translate(404, 256)" filter="url(#subtleGlow)">
+      <circle cx="0" cy="0" r="24" fill="url(#cyanGlow)"/>
+      <circle cx="0" cy="0" r="14" fill="#050508"/>
+      <!-- Typographic 'T' / 'a' glyph mark inside -->
+      <text x="0" y="5" font-family="'JetBrains Mono', monospace" font-weight="900" font-size="16" fill="#00f5d4" text-anchor="middle">T</text>
+    </g>
+
+    <!-- CENTRAL HERO MONOGRAM: 'D' & 'F' in Cyber-Growth Precision Geometry -->
+    <g transform="translate(0, 10)">
+      <!-- 'D' Geometric Pillar -->
+      <g filter="url(#glowOrange)">
+        <path d="M 136 170 
+                 L 214 170 
+                 C 264 170, 298 202, 298 256 
+                 C 298 310, 264 342, 214 342 
+                 L 136 342 
+                 Z 
+                 M 180 212 
+                 L 180 300 
+                 L 210 300 
+                 C 238 300, 256 284, 256 256 
+                 C 256 228, 238 212, 210 212 
+                 Z" 
+              fill="url(#orangeGlow)"/>
+      </g>
+
+      <!-- 'F' Interlocking Cyber Structure -->
+      <g filter="url(#subtleGlow)">
+        <path d="M 284 170 
+                 L 376 170 
+                 L 376 210 
+                 L 326 210 
+                 L 326 238 
+                 L 368 238 
+                 L 368 276 
+                 L 326 276 
+                 L 326 342 
+                 L 284 342 
+                 Z" 
+              fill="url(#cyanGlow)"/>
+      </g>
+
+      <!-- Precision Apex Connection Nodes -->
+      <circle cx="284" cy="170" r="5" fill="#ffffff"/>
+      <circle cx="376" cy="170" r="4" fill="#ff6b35"/>
+      <circle cx="368" cy="238" r="4" fill="#00f5d4"/>
+      <circle cx="326" cy="342" r="4" fill="#c084fc"/>
+      <circle cx="136" cy="342" r="4" fill="#ff9e00"/>
+    </g>
+
+    <!-- Bottom Badge: 'DESIGN FUNDAMENTALS • 5 PILLARS' -->
+    <g transform="translate(256, 396)">
+      <rect x="-110" y="-14" width="220" height="28" rx="14" fill="#090a12" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+      <!-- 5 Color Spectrum Dots for 5 Fundamentals -->
+      <circle cx="-85" cy="0" r="4" fill="#ff6b35"/> <!-- Color -->
+      <circle cx="-68" cy="0" r="4" fill="#00f5d4"/> <!-- Typography -->
+      <circle cx="-51" cy="0" r="4" fill="#c084fc"/> <!-- Hierarchy -->
+      <circle cx="-34" cy="0" r="4" fill="#ffffff"/> <!-- Contrast -->
+      <circle cx="-17" cy="0" r="4" fill="#ffd166"/> <!-- Alignment -->
+      
+      <text x="35" y="4" font-family="'Inter', sans-serif" font-weight="800" font-size="10.5" fill="#f1f5f9" letter-spacing="2.5" text-anchor="middle">MASTERPIECE</text>
+    </g>
+  </g>
+</svg>`;
+};
+
+async function generateAll() {
+  console.log('🚀 Generating Design Fundamentals Brand & PWA Icons...');
+
+  const masterSvg = createMasterSvg({ maskable: false });
+  const maskableSvg = createMasterSvg({ maskable: true });
+
+  // 1. Save SVG favicon
+  fs.writeFileSync(path.join(publicDir, 'favicon.svg'), masterSvg);
+  console.log('✅ Created public/favicon.svg');
+
+  // 2. Generate standard PNG sizes
+  const sizes = [
+    { name: 'favicon-16x16.png', size: 16, svg: masterSvg },
+    { name: 'favicon-32x32.png', size: 32, svg: masterSvg },
+    { name: 'favicon-48x48.png', size: 48, svg: masterSvg },
+    { name: 'apple-touch-icon.png', size: 180, svg: masterSvg },
+    { name: 'icon-192.png', size: 192, svg: masterSvg },
+    { name: 'icon-512.png', size: 512, svg: masterSvg },
+    { name: 'icon-maskable-192.png', size: 192, svg: maskableSvg },
+    { name: 'icon-maskable-512.png', size: 512, svg: maskableSvg },
+  ];
+
+  for (const item of sizes) {
+    const outPath = path.join(publicDir, item.name);
+    await sharp(Buffer.from(item.svg))
+      .resize(item.size, item.size)
+      .png()
+      .toFile(outPath);
+    console.log(`✅ Created public/${item.name} (${item.size}x${item.size})`);
+  }
+
+  // 3. Generate multi-resolution favicon.ico
+  const icoBuffers = await Promise.all([
+    sharp(Buffer.from(masterSvg)).resize(16, 16).png().toBuffer(),
+    sharp(Buffer.from(masterSvg)).resize(32, 32).png().toBuffer(),
+    sharp(Buffer.from(masterSvg)).resize(48, 48).png().toBuffer(),
+    sharp(Buffer.from(masterSvg)).resize(64, 64).png().toBuffer(),
+  ]);
+
+  const ico = await pngToIco(icoBuffers);
+  fs.writeFileSync(path.join(publicDir, 'favicon.ico'), ico);
+  fs.writeFileSync(path.resolve('favicon.ico'), ico);
+  console.log('✅ Created public/favicon.ico & root favicon.ico (16, 32, 48, 64px multi-resolution)');
+
+  console.log('🎉 All icons successfully generated with high-fidelity Design Fundamentals identity!');
+}
+
+generateAll().catch(err => {
+  console.error('❌ Error generating icons:', err);
+  process.exit(1);
+});

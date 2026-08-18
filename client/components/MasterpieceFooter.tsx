@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Sparkles, ArrowUp, Shield, Terminal, Eye } from "lucide-react";
+import { DFLogoIcon } from "./icons/FundamentalIcons";
 import { useTranslation } from "@/hooks/useTranslation";
 
 export default function MasterpieceFooter() {
@@ -43,12 +44,8 @@ export default function MasterpieceFooter() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand Col */}
           <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#ff6b35] to-[#00d9ff] p-0.5">
-                <div className="w-full h-full bg-[#050505] rounded-[6px] flex items-center justify-center font-display font-bold text-white text-xs">
-                  DF
-                </div>
-              </div>
+            <div className="flex items-center gap-3">
+              <DFLogoIcon className="w-8 h-8 drop-shadow-[0_0_8px_rgba(255,107,53,0.3)]" />
               <span className="font-display font-bold text-lg text-white">
                 Design Fundamentals
               </span>
