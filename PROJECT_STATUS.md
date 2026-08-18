@@ -224,26 +224,22 @@ TOTAL:               ~3,000 linhas
 
 ---
 
-## 🚀 Deployment Ready
+## 🚀 Deployment em Produção (Vercel)
 
-### Vercel Configuration ✅
+### Status do Deploy: 🟢 ONLINE / ATIVO
 
-```json
-{
-  "buildCommand": "pnpm build",
-  "outputDirectory": "dist/spa",
-  "framework": "vite",
-  "rewrites": [...SPA config...]
-}
-```
+- **URL de Produção Oficial**: [https://design-fundamentals-pi.vercel.app/](https://design-fundamentals-pi.vercel.app/)
+- **Provedor**: Vercel Global Edge CDN
+- **Framework**: Vite SPA (React 18)
+- **CI/CD**: Deploy contínuo ativado via Git Push
 
-### Próximos Passos para Deploy
+### Checklist de Deploy Concluído
 
 1. ✅ Repositório Git conectado
-2. ✅ vercel.json configurado
-3. ⏳ Conectar ao Vercel Dashboard
-4. ⏳ Fazer primeiro deploy
-5. ⏳ Configurar domínio customizado (opcional)
+2. ✅ `vercel.json` configurado (SPA rewrites, headers de segurança)
+3. ✅ Conectado ao Vercel Dashboard
+4. ✅ Deploy de produção publicado com sucesso
+5. ✅ Domínio e HTTPS com certificado SSL ativo
 
 **Instruções detalhadas**: Ver [DEPLOY.md](./DEPLOY.md)
 

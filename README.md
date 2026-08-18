@@ -265,8 +265,8 @@ Este projeto está configurado para deploy automático no Vercel com CI/CD integ
    - Exemplo: `NODE_ENV=production`
 
 4. **Acessar a aplicação**:
-   - URL padrão: `https://<seu-projeto>.vercel.app`
-   - Domínio customizado: Configure em `Settings > Domains`
+   - URL Oficial: [https://design-fundamentals-pi.vercel.app/](https://design-fundamentals-pi.vercel.app/)
+   - Domínio customizado: [https://design.artesdosul.com](https://design.artesdosul.com)
 
 #### Features de Segurança Habilitadas
 

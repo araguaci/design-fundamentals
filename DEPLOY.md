@@ -47,17 +47,21 @@ Após clicar em Deploy:
 
 **Tempo estimado**: 2-3 minutos
 
-## 📊 Passo 3: Verificar o Deploy
+## 📊 Passo 3: Deploy em Produção
+ 
+ ### URL Oficial de Produção
+ 
+ ```
+ https://design-fundamentals-pi.vercel.app/
+ ```
+ 
+- **Status**: 🟢 Online & Live
+- **Ambiente**: Produção (Vercel Global CDN)
+- **PWA**: Instalável & Suporte Offline Ativo
 
-### URL de Produção
+ ### Acessar Dashboard
 
-```
-https://<seu-projeto>.vercel.app
-```
-
-### Acessar Dashboard
-
-- Vá para [https://vercel.com/dashboard](https://vercel.com/dashboard)
+ - Vá para [https://vercel.com/dashboard](https://vercel.com/dashboard)
 - Clique no seu projeto
 - Verifique logs, domínio e settings
 
